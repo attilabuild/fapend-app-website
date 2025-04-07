@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-rgb: 0, 0, 0;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background-color: rgb(var(--background-rgb));
+  min-height: 100vh;
+  background-image: 
+    radial-gradient(circle at 25% 25%, rgba(58, 134, 255, 0.03) 0%, transparent 40%),
+    radial-gradient(circle at 75% 75%, rgba(58, 134, 255, 0.03) 0%, transparent 40%),
+    linear-gradient(rgba(255, 255, 255, 0.01) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.01) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 30px 30px, 30px 30px;
+  background-position: 0 0, 0 0, -1px -1px, -1px -1px;
+}
+
+/* Enhanced styling for a more professional dark theme */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold tracking-tight;
+  }
+}
+
+@layer components {
+  .dark-card {
+    @apply bg-secondary rounded-lg shadow-dark transition-all duration-300 hover:shadow-dark-lg border border-dark-300;
+    background-image: linear-gradient(to bottom, rgba(255,255,255,0.01), transparent);
+  }
+  
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold mb-4 text-text-primary;
+  }
+  
+  .section-subtitle {
+    @apply text-lg text-text-secondary max-w-3xl mx-auto mb-12;
+  }
+  
+  .btn-primary {
+    @apply bg-gradient-to-r from-gradient-blue-start to-gradient-blue-mid text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 shadow-glow;
+  }
+  
+  .btn-secondary {
+    @apply bg-dark-100 hover:bg-dark-200 text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 border border-dark-300;
+  }
+  
+  .gradient-text {
+    @apply bg-gradient-to-r from-white via-white to-gray-400 bg-clip-text text-transparent;
+  }
+  
+  .mobile-mockup {
+    @apply relative;
+    perspective: 1000px;
+  }
+  
+  .mobile-mockup-inner {
+    @apply relative overflow-hidden rounded-[40px] border-[14px] border-dark-100 shadow-dark-lg;
+    width: 280px;
+    height: 580px;
+    transform: rotateY(-5deg) rotateX(5deg);
+    box-shadow: 
+      0 10px 30px rgba(0,0,0,0.5),
+      inset 0 0 10px rgba(0,0,0,0.5);
+  }
+  
+  .phone-notch {
+    @apply absolute w-32 h-7 bg-dark-100 rounded-b-xl mx-auto left-0 right-0 -top-1 z-10;
+  }
+  
+  .phone-preview {
+    @apply w-full h-full bg-gradient-to-b from-dark-300 to-dark-500 overflow-hidden relative;
+  }
+  
+  .phone-status-bar {
+    @apply flex justify-between items-center px-5 py-2 text-text-primary text-xs bg-dark-500 bg-opacity-80;
+  }
+  
+  .phone-screen-reflection {
+    @apply absolute inset-0 opacity-10 pointer-events-none;
+    background: linear-gradient(
+      120deg,
+      transparent 40%,
+      rgba(255, 255, 255, 0.3) 45%,
+      rgba(255, 255, 255, 0.1) 50%,
+      transparent 55%
+    );
+  }
+} 

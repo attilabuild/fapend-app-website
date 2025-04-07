@@ -1,0 +1,10 @@
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+# Block access to API routes
+User-agent: *
+Disallow: /api/
+
+# Sitemap location
+Sitemap: https://fapend.com/sitemap.xml 

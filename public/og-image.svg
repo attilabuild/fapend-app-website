@@ -1,0 +1,99 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#000000"/>
+  
+  <!-- Background patterns -->
+  <path d="M0 0L1200 0L1200 630L0 630L0 0Z" fill="black"/>
+  <rect x="0" y="0" width="1200" height="630" fill="url(#gradient-bg)"/>
+  
+  <!-- Grid pattern -->
+  <g opacity="0.05">
+    <rect x="0" y="0" width="100%" height="100%" fill="url(#grid-pattern)"/>
+  </g>
+  
+  <!-- Accent circles -->
+  <circle cx="400" cy="200" r="300" fill="url(#blue-radial)" opacity="0.1"/>
+  <circle cx="900" cy="500" r="200" fill="url(#purple-radial)" opacity="0.1"/>
+  
+  <!-- Logo -->
+  <g transform="translate(240, 220)">
+    <rect width="120" height="120" rx="24" fill="url(#logo-gradient)"/>
+    <path d="M30 55.5C30 45.8355 37.8355 38 47.5 38H72.5C82.1645 38 90 45.8355 90 55.5V64.5C90 74.1645 82.1645 82 72.5 82H47.5C37.8355 82 30 74.1645 30 64.5V55.5Z" fill="black"/>
+    <path d="M42 53V71M42 53H48M42 53H36M57 53V59M57 59V71M57 59H51M57 59H66M78 53L72 62L78 71" stroke="white" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  
+  <!-- Text content -->
+  <text x="400" y="270" font-family="Arial, sans-serif" font-weight="bold" font-size="80" fill="white">FAPEND</text>
+  <text x="400" y="340" font-family="Arial, sans-serif" font-size="40" fill="#b3b3b3">Your All-in-One NoFap Companion</text>
+  
+  <!-- Features -->
+  <g transform="translate(400, 400)">
+    <g transform="translate(0, 0)">
+      <circle cx="20" cy="20" r="20" fill="url(#logo-gradient)"/>
+      <path d="M20 12V28M20 12H26M20 12H14" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="50" y="28" font-family="Arial, sans-serif" font-size="24" fill="white">Track Your Progress</text>
+    </g>
+    
+    <g transform="translate(0, 60)">
+      <circle cx="20" cy="20" r="20" fill="url(#logo-gradient)"/>
+      <path d="M14 12L26 28M26 12L14 28" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="50" y="28" font-family="Arial, sans-serif" font-size="24" fill="white">Break Free From Addiction</text>
+    </g>
+    
+    <g transform="translate(0, 120)">
+      <circle cx="20" cy="20" r="20" fill="url(#logo-gradient)"/>
+      <path d="M14 20H26M20 14V26" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="50" y="28" font-family="Arial, sans-serif" font-size="24" fill="white">Join Supportive Community</text>
+    </g>
+  </g>
+  
+  <!-- App store badges -->
+  <g transform="translate(810, 400)">
+    <!-- Apple App Store -->
+    <rect x="0" y="0" width="180" height="60" rx="10" fill="white"/>
+    <g transform="translate(20, 16)">
+      <path d="M27 41C26 43.5 23.5 48 19.5 48C14.5 48 14 44.5 9 44.5C4 44.5 0 50 0 50C0 50 4.5 38 13 38C17.5 38 19 41.5 24 41.5C29 41.5 27 41 27 41ZM19.5 13C21 9.5 18.5 3 13.5 3C8.5 3 6 9 6 12.5C6 16 9 22 14 22C19 22 18 16.5 19.5 13Z" fill="black"/>
+      <text x="38" y="28" font-family="Arial, sans-serif" font-weight="bold" font-size="18" fill="black">App Store</text>
+    </g>
+    
+    <!-- Google Play -->
+    <rect x="0" y="80" width="180" height="60" rx="10" fill="white"/>
+    <g transform="translate(20, 96)">
+      <path d="M3 3L19 14L3 25V3Z" fill="black"/>
+      <path d="M24 11L5 0L19 14L24 11Z" fill="black"/>
+      <path d="M24 17L5 28L19 14L24 17Z" fill="black"/>
+      <text x="38" y="28" font-family="Arial, sans-serif" font-weight="bold" font-size="18" fill="black">Google Play</text>
+    </g>
+  </g>
+  
+  <!-- Definitions -->
+  <defs>
+    <!-- Background gradient -->
+    <linearGradient id="gradient-bg" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#111111"/>
+      <stop offset="1" stop-color="#000000"/>
+    </linearGradient>
+    
+    <!-- Logo gradient -->
+    <linearGradient id="logo-gradient" x1="0" y1="0" x2="120" y2="120" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#3A86FF"/>
+      <stop offset="1" stop-color="#2563EB"/>
+    </linearGradient>
+    
+    <!-- Background patterns -->
+    <pattern id="grid-pattern" patternUnits="userSpaceOnUse" width="30" height="30" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="30" stroke="white" stroke-width="0.5"/>
+      <line x1="0" y1="0" x2="30" y2="0" stroke="white" stroke-width="0.5"/>
+    </pattern>
+    
+    <!-- Radial gradients -->
+    <radialGradient id="blue-radial" cx="0.5" cy="0.5" r="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#3A86FF"/>
+      <stop offset="1" stop-color="#3A86FF" stop-opacity="0"/>
+    </radialGradient>
+    
+    <radialGradient id="purple-radial" cx="0.5" cy="0.5" r="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#8B5CF6"/>
+      <stop offset="1" stop-color="#8B5CF6" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+</svg> 

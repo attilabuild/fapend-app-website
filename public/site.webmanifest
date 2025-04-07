@@ -1,0 +1,53 @@
+{
+  "name": "Fapend - Your NoFap Companion",
+  "short_name": "Fapend",
+  "description": "Take control of your NoFap journey with Fapend. Track progress, get daily motivation, and join a supportive community.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["productivity", "health", "lifestyle"],
+  "screenshots": [
+    {
+      "src": "/screenshots/screenshot1.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "platform": "wide",
+      "label": "Fapend Dashboard"
+    },
+    {
+      "src": "/screenshots/screenshot2.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "platform": "wide",
+      "label": "Track Your Progress"
+    }
+  ],
+  "related_applications": [
+    {
+      "platform": "play",
+      "url": "https://play.google.com/store/apps/details?id=com.fapend.app",
+      "id": "com.fapend.app"
+    },
+    {
+      "platform": "itunes",
+      "url": "https://apps.apple.com/app/fapend/id1234567890"
+    }
+  ],
+  "prefer_related_applications": true
+}
