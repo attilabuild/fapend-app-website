@@ -67,7 +67,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
-      <body className="bg-primary text-text-primary min-h-screen selection:bg-accent selection:text-white overflow-x-hidden">
+      <body className="bg-black text-text-primary min-h-screen selection:bg-accent selection:text-white overflow-x-hidden">
         {children}
       </body>
     </html>
