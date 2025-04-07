@@ -2,7 +2,7 @@ import React from 'react';
 
 const Statistics = () => {
   return (
-    <section className="w-full bg-black py-20">
+    <section id="statistics" className="w-full bg-black py-20">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
           <div className="bg-primary p-8 rounded-lg text-center">

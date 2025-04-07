@@ -23,13 +23,14 @@ const Navbar = () => {
         <img src='android-chrome-512x512.png' alt='Fapend Logo' className='w-10 h-10 mr-2'></img><h1>Fapend</h1>
         </Link>
         <div className="hidden md:flex space-x-8">
-          <Link href="/" className="text-text-secondary hover:text-white transition-colors">Home</Link>
-          <Link href="/features" className="text-text-secondary hover:text-white transition-colors">Features</Link>
-          <Link href="/pricing" className="text-text-secondary hover:text-white transition-colors">Pricing</Link>
+          <a href="#hero" className="text-text-secondary hover:text-white transition-colors">Home</a>
+          <a href="#statistics" className="text-text-secondary hover:text-white transition-colors">Statistics</a>
+          <a href="#testimonials" className="text-text-secondary hover:text-white transition-colors">Testimonials</a>
+          <a href="#faq" className="text-text-secondary hover:text-white transition-colors">FAQ</a>
         </div>
         <div>
           <Link 
-            href="/#download" 
+            href="/waitlist" 
             className="bg-gradient-to-r from-gradient-blue-start to-gradient-blue-mid text-white px-5 py-2.5 rounded-lg transition-all duration-300 hover:shadow-glow font-medium"
           >
             Download App

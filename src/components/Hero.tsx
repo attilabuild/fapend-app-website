@@ -6,7 +6,7 @@ import Image from 'next/image';
 
 const Hero = () => {
   return (
-    <section className="w-full bg-black py-28">
+    <section id="hero" className="w-full bg-black py-28">
       <div className="container mx-auto px-4 pt-24">
         <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-16">
           {/* Left side - App Mockup */}
