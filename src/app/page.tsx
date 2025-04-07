@@ -4,7 +4,6 @@ import Hero from '@/components/Hero';
 import Features from '@/components/Features';
 import Statistics from '@/components/Statistics';
 import Testimonials from '@/components/Testimonials';
-import Pricing from '@/components/Pricing';
 import FAQ from '@/components/FAQ';
 import BottomCTA from '@/components/BottomCTA';
 import Footer from '@/components/Footer';
