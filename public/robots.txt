@@ -7,4 +7,4 @@ User-agent: *
 Disallow: /api/
 
 # Sitemap location
-Sitemap: https://fapend.com/sitemap.xml 
+Sitemap: https://FapEnd.com/sitemap.xml 

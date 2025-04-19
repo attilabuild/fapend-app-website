@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://fapend.com/</loc>
+    <loc>https://FapEnd.com/</loc>
     <lastmod>2023-06-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://fapend.com/features</loc>
+    <loc>https://FapEnd.com/features</loc>
     <lastmod>2023-06-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://fapend.com/pricing</loc>
+    <loc>https://FapEnd.com/pricing</loc>
     <lastmod>2023-06-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://fapend.com/privacy</loc>
+    <loc>https://FapEnd.com/privacy</loc>
     <lastmod>2023-06-22</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://fapend.com/terms</loc>
+    <loc>https://FapEnd.com/terms</loc>
     <lastmod>2023-06-22</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>

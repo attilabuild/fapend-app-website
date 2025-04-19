@@ -1,7 +1,7 @@
 {
-  "name": "Fapend - Your NoFap Companion",
-  "short_name": "Fapend",
-  "description": "Take control of your NoFap journey with Fapend. Track progress, get daily motivation, and join a supportive community.",
+  "name": "FapEnd - Your NoFap Companion",
+  "short_name": "FapEnd",
+  "description": "Take control of your NoFap journey with FapEnd. Track progress, get daily motivation, and join a supportive community.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#000000",
@@ -28,7 +28,7 @@
       "sizes": "1280x720",
       "type": "image/png",
       "platform": "wide",
-      "label": "Fapend Dashboard"
+      "label": "FapEnd Dashboard"
     },
     {
       "src": "/screenshots/screenshot2.png",
@@ -41,12 +41,12 @@
   "related_applications": [
     {
       "platform": "play",
-      "url": "https://play.google.com/store/apps/details?id=com.fapend.app",
-      "id": "com.fapend.app"
+      "url": "https://play.google.com/store/apps/details?id=com.FapEnd.app",
+      "id": "com.FapEnd.app"
     },
     {
       "platform": "itunes",
-      "url": "https://apps.apple.com/app/fapend/id1234567890"
+      "url": "https://apps.apple.com/app/FapEnd/id1234567890"
     }
   ],
   "prefer_related_applications": true

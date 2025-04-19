@@ -62,9 +62,9 @@ const Statistics = () => {
     <section id="statistics" className="w-full bg-black py-20">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Change Your Life, NOW</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Transform Your Life Today</h2>
           <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-            Everything you need to succeed on your self-improvement journey, all in one app.
+          Rebuild yourself from the ground up with powerful tools designed for real transformation
           </p>
         </div>
 

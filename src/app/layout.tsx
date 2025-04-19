@@ -2,34 +2,34 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Fapend - Your All-in-One NoFap Companion',
-  description: 'Take control of your NoFap journey with Fapend. Track progress, get daily motivation, and join a supportive community for self-improvement.',
-  keywords: ['nofap', 'fapend', 'addiction recovery', 'self-improvement', 'habit tracker', 'productivity app'],
-  authors: [{ name: 'Fapend Team' }],
-  creator: 'Fapend',
-  publisher: 'Fapend',
+  title: 'FapEnd - Your All-in-One NoFap Companion',
+  description: 'Take control of your NoFap journey with FapEnd. Track progress, get daily motivation, and join a supportive community for self-improvement.',
+  keywords: ['nofap', 'FapEnd', 'addiction recovery', 'self-improvement', 'habit tracker', 'productivity app'],
+  authors: [{ name: 'FapEnd Team' }],
+  creator: 'FapEnd',
+  publisher: 'FapEnd',
   formatDetection: {
     telephone: false,
   },
-  applicationName: 'Fapend',
+  applicationName: 'FapEnd',
   appleWebApp: {
     capable: true,
-    title: 'Fapend',
+    title: 'FapEnd',
     statusBarStyle: 'black-translucent',
   },
   openGraph: {
     type: 'website',
-    siteName: 'Fapend',
-    title: 'Fapend - Your All-in-One NoFap Companion',
-    description: 'Take control of your NoFap journey with Fapend. Track progress, get daily motivation, and join a supportive community for self-improvement.',
+    siteName: 'FapEnd',
+    title: 'FapEnd - Your All-in-One NoFap Companion',
+    description: 'Take control of your NoFap journey with FapEnd. Track progress, get daily motivation, and join a supportive community for self-improvement.',
     images: [{
       url: '/og-image.png',
     }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Fapend - Your All-in-One NoFap Companion',
-    description: 'Take control of your NoFap journey with Fapend. Track progress, get daily motivation, and join a supportive community for self-improvement.',
+    title: 'FapEnd - Your All-in-One NoFap Companion',
+    description: 'Take control of your NoFap journey with FapEnd. Track progress, get daily motivation, and join a supportive community for self-improvement.',
     images: ['/og-image.png'],
   },
   icons: {

@@ -12,10 +12,10 @@ const Hero = () => {
           {/* Left side - Text Content */}
           <div className="order-1 text-center md:text-left pr-0 md:pr-4">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 gradient-text">
-              Your All-in-One<br />NoFap Companion
+            Break Free with the Ultimate NoFap App
             </h1>
             <p className="text-lg md:text-xl text-text-secondary mb-6 max-w-2xl mx-auto md:mx-0">
-              Track your progress, get daily motivation, set goals, and join a supportive community on your journey to self-improvement.
+              Track your NoFap journey, find daily motivation, and build lasting habits with our unique, community-driven approach. 
             </p>
             
             <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-4 mb-6">
@@ -32,8 +32,8 @@ const Hero = () => {
                 href="/waitlist"
                 className="btn-secondary"
               >
-                <svg className="w-6 h-6 mr-2 inline-block" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M5 20.5v-17c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v17l-7-3-7 3zm7-15c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" />
+                <svg className="w-6 h-6 mr-2 inline-block" fill="currentColor" viewBox="0 0 512 512">
+                  <path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z" />
                 </svg>
                 Google Play
               </Link>
@@ -48,7 +48,7 @@ const Hero = () => {
               
               <Image 
                 src="/mockup.png" 
-                alt="Fapend App Mockup" 
+                alt="FapEnd App Mockup" 
                 width={500} 
                 height={1000}
                 className="max-w-full h-auto rounded-3xl shadow-2xl"
