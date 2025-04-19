@@ -33,7 +33,7 @@ const Navbar = () => {
             href="/waitlist" 
             className="bg-gradient-to-r from-gradient-blue-start to-gradient-blue-mid text-white px-5 py-2.5 rounded-lg transition-all duration-300 hover:shadow-glow font-medium"
           >
-            Download App
+            Download The App
           </Link>
         </div>
       </div>
