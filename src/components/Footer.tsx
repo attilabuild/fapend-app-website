@@ -3,12 +3,12 @@ import Link from 'next/link';
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-primary pt-16 pb-6 border-t border-gray-800">
+    <footer className="w-full bg-black pt-16 pb-6 border-t border-gray-800">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
           <div>
             <div className="flex items-center mb-4">
-              <div className="text-xl font-bold mr-2">NoFap</div>
+              <div className="text-xl font-bold mr-2">Fapend</div>
               <div className="bg-accent text-white text-xs px-2 py-0.5 rounded">App</div>
             </div>
             <p className="text-gray-400 mb-4">
@@ -34,44 +34,24 @@ const Footer = () => {
           </div>
           
           <div>
-            <h4 className="font-semibold text-lg mb-4">Product</h4>
+            <h4 className="font-semibold text-lg mb-4">Site Sections</h4>
             <ul className="space-y-2">
-              <li><Link href="/features" className="text-gray-400 hover:text-white">Features</Link></li>
-              <li><Link href="/pricing" className="text-gray-400 hover:text-white">Pricing</Link></li>
-              <li><Link href="/reviews" className="text-gray-400 hover:text-white">Reviews</Link></li>
-              <li><Link href="/updates" className="text-gray-400 hover:text-white">Updates</Link></li>
-            </ul>
-          </div>
-          
-          <div>
-            <h4 className="font-semibold text-lg mb-4">Support</h4>
-            <ul className="space-y-2">
-              <li><Link href="/help" className="text-gray-400 hover:text-white">Help Center</Link></li>
-              <li><Link href="/contact" className="text-gray-400 hover:text-white">Contact Us</Link></li>
-              <li><Link href="/faq" className="text-gray-400 hover:text-white">FAQ</Link></li>
-              <li><Link href="/community" className="text-gray-400 hover:text-white">Community</Link></li>
-            </ul>
-          </div>
-          
-          <div>
-            <h4 className="font-semibold text-lg mb-4">Legal</h4>
-            <ul className="space-y-2">
-              <li><Link href="/privacy" className="text-gray-400 hover:text-white">Privacy Policy</Link></li>
-              <li><Link href="/terms" className="text-gray-400 hover:text-white">Terms of Service</Link></li>
-              <li><Link href="/cookies" className="text-gray-400 hover:text-white">Cookie Policy</Link></li>
-              <li><Link href="/data" className="text-gray-400 hover:text-white">Data Processing</Link></li>
+              <li><a href="#hero" className="text-gray-400 hover:text-white">Home</a></li>
+              <li><a href="#statistics" className="text-gray-400 hover:text-white">Features</a></li>
+              <li><a href="#testimonials" className="text-gray-400 hover:text-white">Testimonials</a></li>
+              <li><a href="#faq" className="text-gray-400 hover:text-white">FAQ</a></li>
+              <li><Link href="/waitlist" className="text-gray-400 hover:text-white">Join Waitlist</Link></li>
             </ul>
           </div>
         </div>
         
         <div className="border-t border-gray-800 pt-6 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-500 text-sm mb-4 md:mb-0">
-            &copy; {new Date().getFullYear()} NoFap App. All rights reserved.
+            &copy; {new Date().getFullYear()} Fapend App. All rights reserved.
           </p>
           <div className="flex space-x-6">
             <Link href="/privacy" className="text-gray-500 hover:text-gray-300 text-sm">Privacy</Link>
             <Link href="/terms" className="text-gray-500 hover:text-gray-300 text-sm">Terms</Link>
-            <Link href="/cookies" className="text-gray-500 hover:text-gray-300 text-sm">Cookies</Link>
           </div>
         </div>
       </div>

@@ -5,36 +5,36 @@ const Testimonials = () => {
     {
       name: 'Michael Johnson',
       avatar: '/avatars/avatar1.png',
-      text: 'This app has completely changed my life. The streak counter and emergency motivation button have helped me push through the toughest days. 120+ days and counting!',
-      role: 'User since 2022'
+      text: 'I\'ve been testing the beta version for 3 months and it\'s incredible. The streak counter and emergency motivation button helped me push through the toughest days. Can\'t wait for the full release!',
+      role: 'Beta Tester since January 2025'
     },
     {
       name: 'Richard Chen',
       avatar: '/avatars/avatar2.png',
-      text: 'The progress analytics are incredible. Being able to see the correlation between my NoFap journey and productivity improvements has been eye-opening.',
-      role: 'Premium Member'
+      text: 'The progress analytics in the beta are outstanding. Being able to see the correlation between my NoFap journey and productivity improvements has been eye-opening. Looking forward to the final version.',
+      role: 'Early Access User'
     },
     {
       name: 'Emma Davis',
       avatar: '/avatars/avatar3.png',
-      text: 'I appreciate how the app focuses on holistic improvement - not just quitting a habit but building a better lifestyle. The daily challenges and community support make all the difference.',
-      role: 'User since 2021'
+      text: 'I\'ve been privileged to beta test this app, and I love how it focuses on holistic improvement - not just quitting a habit but building a better lifestyle. The community feature is my favorite part so far.',
+      role: 'Beta Program Member'
     },
     {
       name: 'Carlos Ruiz',
       avatar: '/avatars/avatar4.png',
-      text: 'The accountability features and community forums helped me stay on track when I was close to relapsing. This app has the best support system out there.',
-      role: 'NoFap Champion'
+      text: 'As a beta tester, I\'ve found the accountability features and community forums invaluable when I was close to relapsing. Even in beta, this app has the best support system out there.',
+      role: 'Premium Beta Tester'
     }
-  ];
+  ];  
 
   return (
     <section id="testimonials" className="w-full bg-black py-20">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">What they say about us</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Beta Tester Feedback</h2>
           <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-            Thousands of users have transformed their lives with our app. Here's what some of them have to say.
+            Our beta program participants are already seeing amazing results. Here's what some of our early users have to say.
           </p>
         </div>
 
