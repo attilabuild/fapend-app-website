@@ -1,7 +1,8 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://fapend.com'),
   title: 'FapEnd - Your All-in-One NoFap Companion',
   description: 'Take control of your NoFap journey with FapEnd. Track progress, get daily motivation, and join a supportive community for self-improvement.',
   keywords: ['nofap', 'FapEnd', 'addiction recovery', 'self-improvement', 'habit tracker', 'productivity app'],
@@ -54,6 +55,9 @@ export const metadata: Metadata = {
     ],
   },
   manifest: '/site.webmanifest',
+};
+
+export const viewport: Viewport = {
   themeColor: [
     { media: '(prefers-color-scheme: dark)', color: '#000000' },
     { media: '(prefers-color-scheme: light)', color: '#000000' },
