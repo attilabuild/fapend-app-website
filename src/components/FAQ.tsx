@@ -9,12 +9,12 @@ const FAQ = () => {
       answer: 'NoFap is a challenge where participants abstain from pornography and masturbation to break addictive cycles. Our users report life-changing benefits including 40% improved focus, 65% increased energy, deeper relationships, enhanced confidence, and mental clarity within just 30 days. Many describe it as "finally breaking free from invisible chains."'
     },
     {
-      question: 'How does FapEnd help me succeed where I\'ve failed before?',
-      answer: 'Unlike generic habit trackers, FapEnd is built specifically for the NoFap challenge with proprietary features developed through 3+ years of addiction research. Our emergency button has prevented 92% of relapses, and our community approach increases success rates by 5x compared to trying alone. We don\'t just track—we provide the exact tools you need at your most vulnerable moments.'
+      question: 'How does PureResist help me succeed where I\'ve failed before?',
+      answer: 'Unlike generic habit trackers, PureResist is built specifically for the NoFap challenge with proprietary features developed through 3+ years of addiction research. Our emergency button has prevented 92% of relapses, and our community approach increases success rates by 5x compared to trying alone. We don\'t just track—we provide the exact tools you need at your most vulnerable moments.'
     },
     {
       question: 'How secure is my data?',
-      answer: 'Your privacy is sacred to us. We employ military-grade 256-bit encryption for all personal data, zero third-party data sharing, and provide complete anonymity options. You can use FapEnd without revealing your identity. We designed our security protocols with the understanding that this journey is deeply personal, and your trust is our highest priority.'
+      answer: 'Your privacy is sacred to us. We employ military-grade 256-bit encryption for all personal data, zero third-party data sharing, and provide complete anonymity options. You can use PureResist without revealing your identity. We designed our security protocols with the understanding that this journey is deeply personal, and your trust is our highest priority.'
     },
     {
       question: 'Do you offer refunds?',

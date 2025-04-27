@@ -48,7 +48,7 @@ const Hero = () => {
               
               <Image 
                 src="/mockup.png" 
-                alt="FapEnd App Mockup" 
+                alt="PureResist App Mockup" 
                 width={500} 
                 height={1000}
                 className="max-w-full h-auto rounded-3xl shadow-2xl"

@@ -14,7 +14,7 @@ export default function PrivacyPage() {
           
           <div className="prose prose-invert max-w-none">
             <p className="mb-6">
-              At Fapend, we take your privacy seriously. This Privacy Policy explains how we collect, use, disclose, 
+              At PureResist, we take your privacy seriously. This Privacy Policy explains how we collect, use, disclose, 
               and safeguard your information when you use our mobile application and website.
             </p>
             
@@ -99,7 +99,7 @@ export default function PrivacyPage() {
               <li>Right to withdraw consent (where processing is based on consent)</li>
             </ul>
             <p className="mb-6">
-              To exercise these rights, please contact us at privacy@fapend.com.
+              To exercise these rights, please contact us at privacy@PureResist.com.
             </p>
             
             <h2 className="text-2xl font-bold mt-8 mb-4">Children's Privacy</h2>
@@ -121,7 +121,7 @@ export default function PrivacyPage() {
               If you have any questions about this Privacy Policy, please contact us at:
             </p>
             <div className="mb-8">
-              <p>Email: privacy@fapend.com</p>
+              <p>Email: privacy@PureResist.com</p>
               <p>Or visit our <a href="/contact" className="text-accent hover:underline">Contact Page</a></p>
             </div>
           </div>

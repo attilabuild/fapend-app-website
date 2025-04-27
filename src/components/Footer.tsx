@@ -9,11 +9,11 @@ const Footer = () => {
           {/* Company Info */}
           <div>
             <div className="flex items-center mb-4">
-              <img src='/android-chrome-512x512.png' alt='Fapend Logo' className='w-10 h-10 mr-2' />
-              <h2 className="text-2xl font-bold">Fapend</h2>
+              <img src='/android-chrome-512x512.png' alt='PureResist Logo' className='w-10 h-10 mr-2' />
+              <h2 className="text-2xl font-bold">PureResist</h2>
             </div>
             <p className="text-text-secondary mb-4">
-              Fapend helps you track and control your screen time, promoting digital wellbeing and productivity.
+              PureResist helps you track and control your screen time, promoting digital wellbeing and productivity.
             </p>
             <div className="flex space-x-4">
               <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-white transition-colors">
@@ -66,7 +66,7 @@ const Footer = () => {
         </div>
         
         <div className="border-t border-gray-800 mt-10 pt-6 text-center text-text-secondary">
-          <p>&copy; {new Date().getFullYear()} Fapend. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} PureResist. All rights reserved.</p>
         </div>
       </div>
     </footer>

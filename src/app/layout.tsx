@@ -2,35 +2,35 @@ import type { Metadata, Viewport } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://fapend.com'),
-  title: 'FapEnd - Your All-in-One NoFap Companion',
-  description: 'Take control of your NoFap journey with FapEnd. Track progress, get daily motivation, and join a supportive community for self-improvement.',
-  keywords: ['nofap', 'FapEnd', 'addiction recovery', 'self-improvement', 'habit tracker', 'productivity app'],
-  authors: [{ name: 'FapEnd Team' }],
-  creator: 'FapEnd',
-  publisher: 'FapEnd',
+  metadataBase: new URL('https://PureResist.com'),
+  title: 'PureResist - Your All-in-One NoFap Companion',
+  description: 'Take control of your NoFap journey with PureResist. Track progress, get daily motivation, and join a supportive community for self-improvement.',
+  keywords: ['nofap', 'PureResist', 'addiction recovery', 'self-improvement', 'habit tracker', 'productivity app'],
+  authors: [{ name: 'PureResist Team' }],
+  creator: 'PureResist',
+  publisher: 'PureResist',
   formatDetection: {
     telephone: false,
   },
-  applicationName: 'FapEnd',
+  applicationName: 'PureResist',
   appleWebApp: {
     capable: true,
-    title: 'FapEnd',
+    title: 'PureResist',
     statusBarStyle: 'black-translucent',
   },
   openGraph: {
     type: 'website',
-    siteName: 'FapEnd',
-    title: 'FapEnd - Your All-in-One NoFap Companion',
-    description: 'Take control of your NoFap journey with FapEnd. Track progress, get daily motivation, and join a supportive community for self-improvement.',
+    siteName: 'PureResist',
+    title: 'PureResist - Your All-in-One NoFap Companion',
+    description: 'Take control of your NoFap journey with PureResist. Track progress, get daily motivation, and join a supportive community for self-improvement.',
     images: [{
       url: '/og-image.png',
     }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'FapEnd - Your All-in-One NoFap Companion',
-    description: 'Take control of your NoFap journey with FapEnd. Track progress, get daily motivation, and join a supportive community for self-improvement.',
+    title: 'PureResist - Your All-in-One NoFap Companion',
+    description: 'Take control of your NoFap journey with PureResist. Track progress, get daily motivation, and join a supportive community for self-improvement.',
     images: ['/og-image.png'],
   },
   icons: {

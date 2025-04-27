@@ -5,7 +5,7 @@ const Testimonials = () => {
     {
       name: 'Michael Johnson',
       avatar: '/avatars/avatar1.png',
-      text: 'Before FapEnd, I was trapped in a cycle of addiction for 5 years. After 90 days with the beta, my energy levels increased by 70% and I finally landed my dream job. The emergency button saved me at least 20 times when urges were unbearable.',
+      text: 'Before PureResist, I was trapped in a cycle of addiction for 5 years. After 90 days with the beta, my energy levels increased by 70% and I finally landed my dream job. The emergency button saved me at least 20 times when urges were unbearable.',
       role: 'Beta Tester since January 2025'
     },
     {

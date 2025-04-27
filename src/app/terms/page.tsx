@@ -14,7 +14,7 @@ export default function TermsPage() {
           
           <div className="prose prose-invert max-w-none">
             <p className="mb-6">
-              Welcome to Fapend. These Terms of Service ("Terms") govern your use of our mobile application, website, 
+              Welcome to PureResist. These Terms of Service ("Terms") govern your use of our mobile application, website, 
               and services (collectively, the "Services"). By accessing or using our Services, you agree to be bound 
               by these Terms. If you do not agree to these Terms, please do not use our Services.
             </p>
@@ -74,7 +74,7 @@ export default function TermsPage() {
             
             <h2 className="text-2xl font-bold mt-8 mb-4">6. Intellectual Property Rights</h2>
             <p className="mb-6">
-              Our Services and their contents, features, and functionality are owned by Fapend and are protected by 
+              Our Services and their contents, features, and functionality are owned by PureResist and are protected by 
               copyright, trademark, and other intellectual property laws. You may not reproduce, distribute, modify, 
               create derivative works of, publicly display, publicly perform, republish, download, store, or transmit 
               any of the material on our Services without our prior written consent.
@@ -113,7 +113,7 @@ export default function TermsPage() {
             
             <h2 className="text-2xl font-bold mt-8 mb-4">10. Limitation of Liability</h2>
             <p className="mb-6">
-              TO THE FULLEST EXTENT PERMITTED BY LAW, IN NO EVENT WILL FAPEND, ITS AFFILIATES, OR THEIR LICENSORS, SERVICE PROVIDERS, 
+              TO THE FULLEST EXTENT PERMITTED BY LAW, IN NO EVENT WILL PureResist, ITS AFFILIATES, OR THEIR LICENSORS, SERVICE PROVIDERS, 
               EMPLOYEES, AGENTS, OFFICERS, OR DIRECTORS BE LIABLE FOR DAMAGES OF ANY KIND, UNDER ANY LEGAL THEORY, ARISING OUT OF OR 
               IN CONNECTION WITH YOUR USE OR INABILITY TO USE OUR SERVICES, INCLUDING ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL, 
               CONSEQUENTIAL, OR PUNITIVE DAMAGES.
@@ -121,7 +121,7 @@ export default function TermsPage() {
             
             <h2 className="text-2xl font-bold mt-8 mb-4">11. Indemnification</h2>
             <p className="mb-6">
-              You agree to defend, indemnify, and hold harmless Fapend, its affiliates, and their respective officers, directors, 
+              You agree to defend, indemnify, and hold harmless PureResist, its affiliates, and their respective officers, directors, 
               employees, and agents from and against any claims, liabilities, damages, judgments, awards, losses, costs, expenses, 
               or fees (including reasonable attorneys' fees) arising out of or relating to your violation of these Terms or your 
               use of the Services.
@@ -153,7 +153,7 @@ export default function TermsPage() {
               If you have any questions about these Terms, please contact us at:
             </p>
             <div className="mb-8">
-              <p>Email: terms@fapend.com</p>
+              <p>Email: terms@PureResist.com</p>
               <p>Or visit our <a href="/contact" className="text-accent hover:underline">Contact Page</a></p>
             </div>
           </div>

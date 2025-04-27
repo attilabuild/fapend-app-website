@@ -21,7 +21,7 @@ export default function ContactPage() {
         <div className="max-w-3xl mx-auto">
           <h1 className="text-3xl md:text-4xl font-bold mb-6 text-center">Contact Us</h1>
           <p className="text-lg text-gray-300 mb-10 text-center">
-            Have questions about Fapend App? We're here to help you on your journey.
+            Have questions about PureResist App? We're here to help you on your journey.
           </p>
           
           <div className="max-w-3xl mx-auto bg-gray-900 rounded-xl shadow-lg p-6 md:p-10">
