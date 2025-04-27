@@ -9,7 +9,7 @@ const Footer = () => {
           {/* Company Info */}
           <div>
             <div className="flex items-center mb-4">
-              <img src='/android-chrome-512x512.png' alt='PureResist Logo' className='w-10 h-10 mr-2' />
+              <img src='/logo.png' alt='PureResist Logo' className='w-10 h-10 mr-2' />
               <h2 className="text-2xl font-bold">PureResist</h2>
             </div>
             <p className="text-text-secondary mb-4">

@@ -25,7 +25,7 @@ const Navbar = () => {
     <nav className={`fixed top-0 left-0 right-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-black/90 backdrop-blur-md py-3 shadow-md' : 'bg-transparent py-5'}`}>
       <div className="container mx-auto px-4 flex justify-between items-center">
         <Link href="/" className="flex items-center">
-          <img src='/android-chrome-512x512.png' alt='PureResist Logo' className='w-10 h-10 mr-2'></img>
+          <img src='/logo.png' alt='PureResist Logo' className='w-10 h-10 mr-2'></img>
           <h1>PureResist</h1>
         </Link>
 
