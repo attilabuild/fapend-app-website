@@ -5,12 +5,12 @@ import React, { useState } from 'react';
 const FAQ = () => {
   const faqs = [
     {
-      question: 'What is NoFap and why should I try it?',
-      answer: 'NoFap is a challenge where participants abstain from pornography and masturbation to break addictive cycles. Our users report life-changing benefits including 40% improved focus, 65% increased energy, deeper relationships, enhanced confidence, and mental clarity within just 30 days. Many describe it as "finally breaking free from invisible chains."'
+      question: 'What is NoF*p and why should I try it?',
+      answer: 'NoF*p is a challenge where participants abstain from pornography and masturbation to break addictive cycles. Our users report life-changing benefits including 40% improved focus, 65% increased energy, deeper relationships, enhanced confidence, and mental clarity within just 30 days. Many describe it as "finally breaking free from invisible chains."'
     },
     {
       question: 'How does PureResist help me succeed where I\'ve failed before?',
-      answer: 'Unlike generic habit trackers, PureResist is built specifically for the NoFap challenge with proprietary features developed through 3+ years of addiction research. Our emergency button has prevented 92% of relapses, and our community approach increases success rates by 5x compared to trying alone. We don\'t just track—we provide the exact tools you need at your most vulnerable moments.'
+      answer: 'Unlike generic habit trackers, PureResist is built specifically for the quit corn challenge with proprietary features developed through 3+ years of addiction research. Our emergency button has prevented 92% of relapses, and our community approach increases success rates by 5x compared to trying alone. We don\'t just track—we provide the exact tools you need at your most vulnerable moments.'
     },
     {
       question: 'How secure is my data?',
@@ -38,7 +38,7 @@ const FAQ = () => {
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Questions About Your Journey</h2>
           <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-          Here are some common questions about our app and the NoFap journey. If you don't see your question, feel free to contact us.
+          Here are some common questions about our app and the journey. If you don't see your question, feel free to contact us.
           </p>
         </div>
 

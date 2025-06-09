@@ -8,14 +8,14 @@ const Hero = () => {
   return (
     <section id="hero" className="w-full bg-black py-16">
       <div className="container mx-auto px-4 pt-24">
-        <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-2 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 mt-20 md:grid-cols-2 items-center gap-2 max-w-6xl mx-auto mb-16">
           {/* Left side - Text Content */}
-          <div className="order-1 text-center md:text-left pr-0 md:pr-4">
+          <div className="order-1 mt-12 text-center md:text-left pr-0 md:pr-4">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 gradient-text">
-            Break Free with the Ultimate NoFap App
+            The Ultimate Quit Corn App
             </h1>
             <p className="text-lg md:text-xl text-text-secondary mb-6 max-w-2xl mx-auto md:mx-0">
-              Track your NoFap journey, find daily motivation, and build lasting habits with our unique, community-driven approach. 
+              Track your  journey, find daily motivation, and build lasting habits with our unique, community-driven approach. 
             </p>
             
             <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-4 mb-6">
@@ -47,9 +47,9 @@ const Hero = () => {
               <div className="absolute bottom-0 right-0 w-40 h-40 bg-gradient-blue-start rounded-full filter blur-[80px] opacity-20 -z-10"></div>
               
               <Image 
-                src="/mockup.png" 
+                src="/hoppa.png" 
                 alt="PureResist App Mockup" 
-                width={500} 
+                width={800} 
                 height={1000}
                 className="max-w-full h-auto rounded-3xl shadow-2xl"
                 priority
