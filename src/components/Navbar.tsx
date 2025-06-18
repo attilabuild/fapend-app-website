@@ -54,7 +54,7 @@ const Navbar = () => {
 
         <div className="hidden md:block">
           <Link 
-            href="/waitlist" 
+            href="https://apps.apple.com/rs/app/pureresist-quit-corn-now/id6745742828" 
             className="bg-gradient-to-r from-gradient-blue-start to-gradient-blue-mid text-white px-5 py-2.5 rounded-lg transition-all duration-300 hover:shadow-glow font-medium"
           >
             Download App
