@@ -5,6 +5,7 @@ import Features from '@/components/Features';
 import Statistics from '@/components/Statistics';
 import Testimonials from '@/components/Testimonials';
 import FAQ from '@/components/FAQ';
+import Discord from '@/components/Discord';
 import BottomCTA from '@/components/BottomCTA';
 import Footer from '@/components/Footer';
 
@@ -16,6 +17,7 @@ export default function Home() {
       <Statistics />
       <Testimonials />
       <FAQ />
+      <Discord />
       <BottomCTA />
       <Footer />
     </main>
