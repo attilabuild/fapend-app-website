@@ -52,7 +52,7 @@ const Discord = () => {
             </div>
             
             <Link
-              href="https://discord.gg/YHbgYpcx"
+              href="https://discord.gg/zWJDmqNhZz"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-[#5865F2] hover:bg-[#4752C4] text-white font-medium py-3 px-8 rounded-lg flex items-center justify-center transition duration-300 w-full"

@@ -6,6 +6,7 @@ import Statistics from '@/components/Statistics';
 import Testimonials from '@/components/Testimonials';
 import FAQ from '@/components/FAQ';
 import Discord from '@/components/Discord';
+import Reddit from '@/components/Reddit';
 import BottomCTA from '@/components/BottomCTA';
 import Footer from '@/components/Footer';
 
@@ -18,6 +19,7 @@ export default function Home() {
       <Testimonials />
       <FAQ />
       <Discord />
+      <Reddit />
       <BottomCTA />
       <Footer />
     </main>
