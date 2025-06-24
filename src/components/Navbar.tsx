@@ -49,6 +49,7 @@ const Navbar = () => {
           <a href="/#statistics" className="text-text-secondary hover:text-white transition-colors">Features</a>
           <a href="/#testimonials" className="text-text-secondary hover:text-white transition-colors">Testimonials</a>
           <a href="/#faq" className="text-text-secondary hover:text-white transition-colors">FAQ</a>
+          <Link href="/blog" className="text-text-secondary hover:text-white transition-colors">Blog</Link>
           <Link href="/contact" className="text-text-secondary hover:text-white transition-colors">Contact</Link>
         </div>
 
@@ -94,6 +95,13 @@ const Navbar = () => {
             >
               FAQ
             </a>
+            <Link 
+              href="/blog" 
+              className="text-text-secondary hover:text-white py-2 transition-colors"
+              onClick={() => setMenuOpen(false)}
+            >
+              Blog
+            </Link>
             <Link 
               href="/contact" 
               className="text-text-secondary hover:text-white py-2 transition-colors"
