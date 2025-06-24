@@ -4,7 +4,7 @@ import './globals.css';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://PureResist.com'),
-  title: 'PureResist - Your All-in-One NoFap Companion',
+  title: 'PureResist - Your #1 Science-Based NoFap App',
   description: 'Take control of your NoFap journey with PureResist. Track progress, get daily motivation, and join a supportive community for self-improvement.',
   keywords: ['nofap', 'PureResist', 'addiction recovery', 'self-improvement', 'habit tracker', 'productivity app'],
   authors: [{ name: 'PureResist Team' }],
