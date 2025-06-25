@@ -38,9 +38,9 @@ const Hero = () => {
           <div className="order-1 mt-12 text-center md:text-left pr-0 md:pr-4">
             <h1 
               ref={titleRef}
-              className="text-4xl md:text-4xl lg:text-4xl font-bold mb-4 gradient-text opacity-0 translate-y-8 transition-all duration-1000 ease-out"
+              className="text-4xl md:text-6xl lg:text-6xl font-bold mb-4 gradient-text opacity-0 translate-y-8 transition-all duration-1000 ease-out"
             >
-Quit porn with a proven neuroscience-backed app.
+The Ultimate <br></br>Quit Porn App
 </h1>
             <p 
               ref={descriptionRef}
