@@ -84,15 +84,16 @@ The most effective NoFap app designed to help you break free from porn addiction
             <div className="relative">
               <div className="absolute top-0 left-0 w-60 h-60 bg-gradient-purple-mid rounded-full filter blur-[100px] opacity-20 -z-10 animate-pulse"></div>
               <div className="absolute bottom-0 right-0 w-40 h-40 bg-gradient-blue-start rounded-full filter blur-[80px] opacity-20 -z-10 animate-pulse delay-1000"></div>
-              
-              <Image 
-                src="/pureresist.webp" 
-                alt="PureResist App Mockup" 
-                width={800} 
-                height={1000}
-                className="max-w-full h-auto rounded-3xl shadow-2xl transform hover:scale-105 transition-all duration-500 hover:shadow-2xl"
-                priority
-              />
+              <a href="https://apps.apple.com/rs/app/pureresist-quit-corn-now/id6745742828" target="_blank" rel="noopener noreferrer">
+                <Image 
+                  src="/pureresist.webp" 
+                  alt="PureResist App Mockup" 
+                  width={800} 
+                  height={1000}
+                  className="max-w-full h-auto rounded-3xl shadow-2xl transform hover:scale-105 transition-all duration-500 hover:shadow-2xl"
+                  priority
+                />
+              </a>
             </div>
           </div>
         </div>
