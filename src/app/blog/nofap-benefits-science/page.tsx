@@ -5,23 +5,23 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
-  title: 'The Science Behind NoFap: 7 Proven Benefits Backed by Research | PureResist',
-  description: 'Discover the scientific evidence behind NoFap benefits including improved focus, energy, confidence, and overall well-being. Learn how abstaining from pornography and compulsive behaviors can transform your brain and life with research-backed insights.',
-  keywords: ['nofap science', 'nofap benefits research', 'porn addiction neuroscience', 'dopamine reset', 'brain health', 'self-improvement science', 'PureResist', 'addiction recovery research'],
+  title: 'NoFap Benefits: 7 Scientific Benefits of NoFap Backed by Research | PureResist',
+  description: 'Discover the scientific benefits of NoFap: improved focus, energy, confidence, and mental health. Learn the research-backed evidence behind NoFap benefits.',
+  keywords: ['nofap benefits', 'nofap science', 'nofap research', 'benefits of nofap', 'nofap dopamine', 'nofap brain health', 'nofap confidence', 'PureResist'],
   openGraph: {
-    title: 'The Science Behind NoFap: 7 Proven Benefits Backed by Research',
-    description: 'Discover the scientific evidence behind NoFap benefits including improved focus, energy, confidence, and overall well-being.',
+    title: 'NoFap Benefits: 7 Scientific Benefits of NoFap Backed by Research',
+    description: 'Discover the scientific benefits of NoFap: improved focus, energy, confidence, and mental health. Learn the research-backed evidence.',
     type: 'article',
-    url: 'https://PureResist.com/blog/nofap-benefits-science',
+    url: 'https://www.pureresist.com/blog/nofap-benefits-science',
     images: ['/og-image.png'],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'The Science Behind NoFap: 7 Proven Benefits Backed by Research',
-    description: 'Discover the scientific evidence behind NoFap benefits including improved focus, energy, confidence, and overall well-being.',
+    title: 'NoFap Benefits: 7 Scientific Benefits of NoFap Backed by Research',
+    description: 'Discover the scientific benefits of NoFap: improved focus, energy, confidence, and mental health.',
   },
   alternates: {
-    canonical: 'https://PureResist.com/blog/nofap-benefits-science',
+    canonical: 'https://www.pureresist.com/blog/nofap-benefits-science',
   },
 };
 
@@ -53,7 +53,7 @@ export default function NoFapBenefitsSciencePage() {
               The Science Behind NoFap: 7 Proven Benefits Backed by Research
             </h1>
             <p className="text-xl text-gray-300 leading-relaxed">
-              While NoFap has been dismissed by some as pseudoscience, emerging research is revealing the profound neurological and psychological changes that occur when we abstain from pornography and compulsive sexual behaviors. This comprehensive analysis examines the scientific evidence behind the movement's most commonly reported benefits.
+              While NoFap has been dismissed by some as pseudoscience, emerging research is revealing the profound neurological and psychological changes that occur when we abstain from pornography and compulsive behaviors. This comprehensive analysis examines the scientific evidence behind the movement's most commonly reported benefits.
             </p>
 
             {/* Featured Image */}

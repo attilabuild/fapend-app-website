@@ -1,8 +1,28 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 const FAQ = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    if (sectionRef.current) observer.observe(sectionRef.current);
+
+    return () => observer.disconnect();
+  }, []);
+
   const faqs = [
     {
       question: 'What is NoF*p and why should I try it?',
@@ -33,9 +53,11 @@ const FAQ = () => {
   };
 
   return (
-    <section id="faq" className="w-full bg-black py-24">
+    <section ref={sectionRef} id="faq" className="w-full bg-black py-24 overflow-hidden">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+        <div className={`text-center mb-16 transition-all duration-1000 ease-out ${
+          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+        }`}>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Questions About Your Journey</h2>
           <p className="text-lg text-gray-300 max-w-3xl mx-auto">
           Here are some common questions about our app and the journey. If you don't see your question, feel free to contact us.
@@ -44,7 +66,13 @@ const FAQ = () => {
 
         <div className="max-w-3xl mx-auto">
           {faqs.map((faq, index) => (
-            <div key={index} className="mb-5">
+            <div 
+              key={index} 
+              className={`mb-5 transition-all duration-700 ease-out hover:transform hover:scale-105 ${
+                isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+              }`}
+              style={{ transitionDelay: `${index * 200}ms` }}
+            >
               <button
                 className={`w-full text-left p-5 rounded-lg bg-dark-100 border border-dark-300 flex justify-between items-center shadow-dark hover:shadow-dark-lg transition-all duration-300 ${openIndex === index ? 'rounded-b-none border-b-0' : ''}`}
                 onClick={() => toggleFaq(index)}

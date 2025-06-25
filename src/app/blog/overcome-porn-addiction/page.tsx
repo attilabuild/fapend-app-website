@@ -5,23 +5,23 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
-  title: 'How to Overcome Porn Addiction: A Comprehensive Step-by-Step Recovery Plan | PureResist',
-  description: 'Learn proven strategies to break free from porn addiction, rebuild your brain, and create lasting positive changes in your life. Start your recovery journey with actionable steps and expert advice.',
-  keywords: ['overcome porn addiction', 'porn recovery plan', 'addiction help', 'self-improvement', 'habit change', 'PureResist', 'addiction recovery', 'mental health'],
+  title: 'How to Overcome Porn Addiction: Step-by-Step Recovery Plan & Treatment | PureResist',
+  description: 'Learn how to overcome porn addiction with our step-by-step recovery plan. Get proven strategies, treatment methods, and support to break free from porn addiction.',
+  keywords: ['how to overcome porn addiction', 'porn addiction recovery', 'porn addiction treatment', 'overcome porn addiction', 'porn addiction help', 'addiction recovery', 'PureResist'],
   openGraph: {
-    title: 'How to Overcome Porn Addiction: A Comprehensive Step-by-Step Recovery Plan',
-    description: 'Learn proven strategies to break free from porn addiction, rebuild your brain, and create lasting positive changes in your life.',
+    title: 'How to Overcome Porn Addiction: Step-by-Step Recovery Plan & Treatment',
+    description: 'Learn how to overcome porn addiction with our step-by-step recovery plan. Get proven strategies, treatment methods, and support.',
     type: 'article',
-    url: 'https://PureResist.com/blog/overcome-porn-addiction',
+    url: 'https://www.pureresist.com/blog/overcome-porn-addiction',
     images: ['/og-image.png'],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'How to Overcome Porn Addiction: A Comprehensive Step-by-Step Recovery Plan',
-    description: 'Learn proven strategies to break free from porn addiction, rebuild your brain, and create lasting positive changes in your life.',
+    title: 'How to Overcome Porn Addiction: Step-by-Step Recovery Plan & Treatment',
+    description: 'Learn how to overcome porn addiction with our step-by-step recovery plan. Get proven strategies, treatment methods, and support.',
   },
   alternates: {
-    canonical: 'https://PureResist.com/blog/overcome-porn-addiction',
+    canonical: 'https://www.pureresist.com/blog/overcome-porn-addiction',
   },
 };
 

@@ -1,4 +1,7 @@
+"use client";
+
 import Image from 'next/image';
+import { useEffect, useRef, useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import Features from '@/components/Features';
@@ -12,6 +15,26 @@ import Footer from '@/components/Footer';
 import Link from 'next/link';
 
 export default function Home() {
+  const [isVisible, setIsVisible] = useState(false);
+  const blogSectionRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    if (blogSectionRef.current) observer.observe(blogSectionRef.current);
+
+    return () => observer.disconnect();
+  }, []);
+
   const blogPosts = [
     {
       slug: 'what-is-nofap',
@@ -38,6 +61,7 @@ export default function Home() {
       category: 'Recovery',
     },
   ];
+  
   return (
     <main className="flex min-h-screen flex-col items-center">
       <Navbar />
@@ -49,13 +73,22 @@ export default function Home() {
       <Reddit />
       <BottomCTA />
       {/* Blog Posts Preview Section */}
-      <section className="w-full bg-black py-20 px-4">
+      <section ref={blogSectionRef} className="w-full bg-black py-20 px-4 overflow-hidden">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold mb-10 text-center bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">Latest from the Blog</h2>
+          <h2 className={`text-3xl md:text-4xl font-bold mb-10 text-center bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent transition-all duration-1000 ease-out ${
+            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+          }`}>Latest from the Blog</h2>
           <div className="grid gap-8 md:grid-cols-3">
-            {blogPosts.map((post) => (
-              <Link key={post.slug} href={`/blog/${post.slug}`} className="group">
-                <article className="bg-gray-900 rounded-xl p-6 hover:bg-gray-800 transition-all duration-300 border border-gray-800 hover:border-accent/50 h-full flex flex-col justify-between">
+            {blogPosts.map((post, index) => (
+              <Link 
+                key={post.slug} 
+                href={`/blog/${post.slug}`} 
+                className={`group transition-all duration-1000 ease-out ${
+                  isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+                }`}
+                style={{ transitionDelay: `${index * 200}ms` }}
+              >
+                <article className="bg-gray-900 rounded-xl p-6 hover:bg-gray-800 transition-all duration-300 border border-gray-800 hover:border-accent/50 h-full flex flex-col justify-between hover:transform hover:scale-105 hover:shadow-xl">
                   <div>
                     <div className="flex items-center gap-3 mb-3">
                       <span className="bg-accent/20 text-accent px-2 py-1 rounded-full text-xs font-medium">{post.category}</span>
@@ -72,8 +105,15 @@ export default function Home() {
               </Link>
             ))}
           </div>
-          <div className="text-center mt-10">
-            <Link href="/blog" className="inline-flex items-center bg-accent hover:bg-accent-dark text-white px-6 py-3 rounded-lg font-medium transition-colors duration-300">View All Blog Posts</Link>
+          <div className={`text-center mt-10 transition-all duration-1000 ease-out delay-600 ${
+            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+          }`}>
+            <Link 
+              href="/blog" 
+              className="inline-flex items-center bg-accent hover:bg-accent-dark text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:transform hover:scale-105 hover:shadow-lg"
+            >
+              View All Blog Posts
+            </Link>
           </div>
         </div>
       </section>

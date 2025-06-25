@@ -1,7 +1,29 @@
-import React from 'react';
+"use client";
+
+import React, { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 
 const Testimonials = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    if (sectionRef.current) observer.observe(sectionRef.current);
+
+    return () => observer.disconnect();
+  }, []);
+
   const testimonials = [
     {
       name: 'Michael Johnson',
@@ -30,9 +52,11 @@ const Testimonials = () => {
   ];  
 
   return (
-    <section id="testimonials" className="w-full bg-black py-20">
+    <section ref={sectionRef} id="testimonials" className="w-full bg-black py-20 overflow-hidden">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+        <div className={`text-center mb-16 transition-all duration-1000 ease-out ${
+          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+        }`}>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Real Stories, Real Results</h2>
           <p className="text-lg text-gray-300 max-w-3xl mx-auto">
             Join thousands of people who have transformed their lives with PureResist. Here's what real users are saying about their journey.
@@ -41,9 +65,15 @@ const Testimonials = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
           {testimonials.map((testimonial, index) => (
-            <div key={index} className="bg-secondary p-6 rounded-lg border border-dark-300">
+            <div 
+              key={index} 
+              className={`bg-secondary p-6 rounded-lg border border-dark-300 transition-all duration-700 ease-out hover:transform hover:scale-105 hover:shadow-xl cursor-pointer ${
+                isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+              }`}
+              style={{ transitionDelay: `${index * 200}ms` }}
+            >
               <div className="flex items-start mb-4">
-                <div className="w-12 h-12 rounded-full bg-gradient-to-r from-gradient-blue-start to-gradient-blue-mid mr-4 overflow-hidden flex items-center justify-center text-white font-bold text-lg">
+                <div className="w-12 h-12 rounded-full bg-gradient-to-r from-gradient-blue-start to-gradient-blue-mid mr-4 overflow-hidden flex items-center justify-center text-white font-bold text-lg transform hover:scale-110 transition-transform duration-300">
                   {testimonial.avatar ? (
                     <Image
                       src={testimonial.avatar}

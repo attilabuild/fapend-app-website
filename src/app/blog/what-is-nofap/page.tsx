@@ -5,23 +5,23 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
-  title: 'What is NoFap? The Complete Guide to Understanding the Global Self-Improvement Movement | PureResist',
-  description: 'Discover what NoFap really means, its transformative benefits, and how millions are using this movement to overcome addiction and unlock their full potential. Learn the science, psychology, and practical steps to start your journey.',
-  keywords: ['what is nofap', 'nofap meaning', 'nofap benefits', 'porn addiction recovery', 'self-improvement movement', 'addiction help', 'PureResist', 'nofap community', 'digital wellness'],
+  title: 'What is NoFap? Complete Guide to NoFap Movement, Benefits & How to Start | PureResist',
+  description: 'What is NoFap? Learn everything about the NoFap movement, its benefits, science behind it, and how to start your NoFap journey. Join millions transforming their lives.',
+  keywords: ['what is nofap', 'nofap meaning', 'nofap benefits', 'nofap movement', 'how to start nofap', 'nofap guide', 'porn addiction recovery', 'self-improvement', 'PureResist'],
   openGraph: {
-    title: 'What is NoFap? The Complete Guide to Understanding the Global Self-Improvement Movement',
-    description: 'Discover what NoFap really means, its transformative benefits, and how millions are using this movement to overcome addiction and unlock their full potential.',
+    title: 'What is NoFap? Complete Guide to NoFap Movement, Benefits & How to Start',
+    description: 'What is NoFap? Learn everything about the NoFap movement, its benefits, science behind it, and how to start your NoFap journey.',
     type: 'article',
-    url: 'https://PureResist.com/blog/what-is-nofap',
+    url: 'https://www.pureresist.com/blog/what-is-nofap',
     images: ['/og-image.png'],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'What is NoFap? The Complete Guide to Understanding the Global Self-Improvement Movement',
-    description: 'Discover what NoFap really means, its transformative benefits, and how millions are using this movement to overcome addiction and unlock their full potential.',
+    title: 'What is NoFap? Complete Guide to NoFap Movement, Benefits & How to Start',
+    description: 'What is NoFap? Learn everything about the NoFap movement, its benefits, science behind it, and how to start your NoFap journey.',
   },
   alternates: {
-    canonical: 'https://PureResist.com/blog/what-is-nofap',
+    canonical: 'https://www.pureresist.com/blog/what-is-nofap',
   },
 };
 

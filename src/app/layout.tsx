@@ -3,7 +3,7 @@ import { Analytics } from "@vercel/analytics/next";
 import './globals.css';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://PureResist.com'),
+  metadataBase: new URL('https://www.pureresist.com'),
   title: 'PureResist - Your #1 Science-Based NoFap App',
   description: 'Take control of your NoFap journey with PureResist. Track progress, get daily motivation, and join a supportive community for self-improvement.',
   keywords: ['nofap', 'PureResist', 'addiction recovery', 'self-improvement', 'habit tracker', 'productivity app'],
@@ -56,6 +56,9 @@ export const metadata: Metadata = {
     ],
   },
   manifest: '/site.webmanifest',
+  alternates: {
+    canonical: 'https://www.pureresist.com',
+  },
 };
 
 export const viewport: Viewport = {

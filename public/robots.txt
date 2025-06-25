@@ -2,9 +2,16 @@
 User-agent: *
 Allow: /
 
-# Block access to API routes
-User-agent: *
-Disallow: /api/
+# Sitemap
+Sitemap: https://www.pureresist.com/sitemap.xml
 
-# Sitemap location
-Sitemap: https://PureResist.com/sitemap.xml 
+# Disallow admin or private areas
+Disallow: /api/
+Disallow: /_next/
+Disallow: /admin/
+
+# Allow important pages
+Allow: /blog/
+Allow: /contact/
+Allow: /privacy/
+Allow: /terms/ 

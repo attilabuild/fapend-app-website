@@ -1,6 +1,28 @@
-import React from 'react';
+"use client";
+
+import React, { useEffect, useRef, useState } from 'react';
 
 const Statistics = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    if (sectionRef.current) observer.observe(sectionRef.current);
+
+    return () => observer.disconnect();
+  }, []);
+
   const features = [
     {
       title: "Dashboard",
@@ -59,9 +81,11 @@ const Statistics = () => {
   ];
 
   return (
-    <section id="statistics" className="w-full bg-black py-20">
+    <section ref={sectionRef} id="statistics" className="w-full bg-black py-20 overflow-hidden">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+        <div className={`text-center mb-16 transition-all duration-1000 ease-out ${
+          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+        }`}>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Transform Your Life Today</h2>
           <p className="text-lg text-gray-300 max-w-3xl mx-auto">
           Rebuild yourself from the ground up with powerful tools designed for real transformation
@@ -70,8 +94,14 @@ const Statistics = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {features.map((feature, index) => (
-            <div key={index} className="bg-primary p-8 rounded-lg text-center">
-              <div className="flex justify-center">
+            <div 
+              key={index} 
+              className={`bg-primary p-8 rounded-lg text-center transition-all duration-700 ease-out hover:transform hover:scale-105 hover:shadow-xl cursor-pointer ${
+                isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+              }`}
+              style={{ transitionDelay: `${index * 100}ms` }}
+            >
+              <div className="flex justify-center transform hover:scale-110 transition-transform duration-300">
                 {feature.icon}
               </div>
               <h3 className="text-xl font-bold mb-3">{feature.title}</h3>

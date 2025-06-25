@@ -1,21 +1,49 @@
-import React from 'react';
+"use client";
+
+import React, { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 
 const Reddit = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    if (sectionRef.current) observer.observe(sectionRef.current);
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <section className="w-full bg-black py-20">
+    <section ref={sectionRef} className="w-full bg-black py-20 overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+          <h2 className={`text-3xl md:text-4xl font-bold mb-6 transition-all duration-1000 ease-out ${
+            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+          }`}>
             Join Our Reddit Community
           </h2>
-          <p className="text-lg text-gray-300 mb-10 max-w-2xl mx-auto">
+          <p className={`text-lg text-gray-300 mb-10 max-w-2xl mx-auto transition-all duration-1000 ease-out delay-300 ${
+            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+          }`}>
             Connect with our growing Reddit community. Share your journey, get advice, and find support from others who understand your struggle.
           </p>
           
-          <div className="bg-secondary p-8 rounded-lg border border-dark-300 max-w-2xl mx-auto">
+          <div className={`bg-secondary p-8 rounded-lg border border-dark-300 max-w-2xl mx-auto transition-all duration-1000 ease-out delay-500 hover:transform hover:scale-105 hover:shadow-xl ${
+            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+          }`}>
             <div className="flex items-center justify-center mb-6">
-              <div className="w-16 h-16 bg-[#FF4500] rounded-full mr-4 flex items-center justify-center">
+              <div className="w-16 h-16 bg-[#FF4500] rounded-full mr-4 flex items-center justify-center transform hover:scale-110 transition-transform duration-300">
                 <span className="text-white text-3xl font-bold">r/</span>
               </div>
               <div>
@@ -55,7 +83,7 @@ const Reddit = () => {
               href="https://www.reddit.com/r/pureresist/"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-[#FF4500] hover:bg-[#E03D00] text-white font-medium py-3 px-8 rounded-lg flex items-center justify-center transition duration-300 w-full"
+              className="bg-[#FF4500] hover:bg-[#E03D00] text-white font-medium py-3 px-8 rounded-lg flex items-center justify-center transition-all duration-300 w-full hover:transform hover:scale-105 hover:shadow-lg"
             >
               <span className="text-xl font-bold mr-2">r/</span>
               Join Reddit Community

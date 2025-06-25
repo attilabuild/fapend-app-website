@@ -1,7 +1,3 @@
 {
-  "/page": "app/page.js",
-  "/blog/what-is-nofap/page": "app/blog/what-is-nofap/page.js",
-  "/waitlist/page": "app/waitlist/page.js",
-  "/blog/page": "app/blog/page.js",
-  "/blog/overcome-porn-addiction/page": "app/blog/overcome-porn-addiction/page.js"
+  "/page": "app/page.js"
 }

@@ -1,24 +1,9 @@
-import type { Metadata } from 'next';
+"use client";
+
 import Link from 'next/link';
+import { useEffect, useRef, useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-
-export const metadata: Metadata = {
-  title: 'Blog - PureResist | NoFap Tips, Motivation & Recovery Stories',
-  description: 'Discover expert NoFap tips, motivation strategies, and recovery stories. Learn how to overcome addiction and build better habits with PureResist.',
-  keywords: ['nofap blog', 'addiction recovery', 'self-improvement tips', 'motivation', 'habit building', 'PureResist blog'],
-  openGraph: {
-    title: 'Blog - PureResist | NoFap Tips, Motivation & Recovery Stories',
-    description: 'Discover expert NoFap tips, motivation strategies, and recovery stories. Learn how to overcome addiction and build better habits with PureResist.',
-    type: 'website',
-    url: 'https://PureResist.com/blog',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Blog - PureResist | NoFap Tips, Motivation & Recovery Stories',
-    description: 'Discover expert NoFap tips, motivation strategies, and recovery stories.',
-  },
-};
 
 const blogPosts = [
   {
@@ -51,14 +36,36 @@ const blogPosts = [
 ];
 
 export default function BlogPage() {
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    if (sectionRef.current) observer.observe(sectionRef.current);
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <main className="flex min-h-screen flex-col bg-black">
       <Navbar />
       
-      <div className="container mx-auto px-4 py-20 mt-16 flex-grow">
+      <div ref={sectionRef} className="container mx-auto px-4 py-20 mt-16 flex-grow overflow-hidden">
         <div className="max-w-4xl mx-auto">
           {/* Header */}
-          <div className="text-center mb-16">
+          <div className={`text-center mb-16 transition-all duration-1000 ease-out ${
+            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+          }`}>
             <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
               PureResist Blog
             </h1>
@@ -69,10 +76,15 @@ export default function BlogPage() {
           </div>
 
           {/* Featured Post */}
-          {blogPosts.filter(post => post.featured).map((post) => (
-            <div key={post.slug} className="mb-16">
+          {blogPosts.filter(post => post.featured).map((post, index) => (
+            <div 
+              key={post.slug} 
+              className={`mb-16 transition-all duration-1000 ease-out delay-300 ${
+                isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+              }`}
+            >
               <Link href={`/blog/${post.slug}`} className="group">
-                <div className="bg-gray-900 rounded-2xl p-8 hover:bg-gray-800 transition-all duration-300 border border-gray-800 hover:border-accent/50">
+                <div className="bg-gray-900 rounded-2xl p-8 hover:bg-gray-800 transition-all duration-300 border border-gray-800 hover:border-accent/50 hover:transform hover:scale-105 hover:shadow-xl">
                   <div className="flex items-center gap-3 mb-4">
                     <span className="bg-accent/20 text-accent px-3 py-1 rounded-full text-sm font-medium">
                       {post.category}
@@ -104,9 +116,16 @@ export default function BlogPage() {
 
           {/* All Posts */}
           <div className="grid gap-8 md:grid-cols-2">
-            {blogPosts.filter(post => !post.featured).map((post) => (
-              <Link key={post.slug} href={`/blog/${post.slug}`} className="group">
-                <article className="bg-gray-900 rounded-xl p-6 hover:bg-gray-800 transition-all duration-300 border border-gray-800 hover:border-accent/50 h-full">
+            {blogPosts.filter(post => !post.featured).map((post, index) => (
+              <Link 
+                key={post.slug} 
+                href={`/blog/${post.slug}`} 
+                className={`group transition-all duration-1000 ease-out ${
+                  isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+                }`}
+                style={{ transitionDelay: `${(index + 1) * 200}ms` }}
+              >
+                <article className="bg-gray-900 rounded-xl p-6 hover:bg-gray-800 transition-all duration-300 border border-gray-800 hover:border-accent/50 h-full hover:transform hover:scale-105 hover:shadow-xl">
                   <div className="flex items-center gap-3 mb-3">
                     <span className="bg-accent/20 text-accent px-2 py-1 rounded-full text-xs font-medium">
                       {post.category}
@@ -137,7 +156,9 @@ export default function BlogPage() {
           </div>
 
           {/* Newsletter Signup */}
-          <div className="mt-16 bg-gradient-to-r from-gray-900 to-gray-800 rounded-2xl p-8 border border-gray-700">
+          <div className={`mt-16 bg-gradient-to-r from-gray-900 to-gray-800 rounded-2xl p-8 border border-gray-700 transition-all duration-1000 ease-out delay-700 hover:transform hover:scale-105 hover:shadow-xl ${
+            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+          }`}>
             <div className="text-center">
               <h3 className="text-2xl font-bold mb-4">Stay Updated</h3>
               <p className="text-gray-300 mb-6">
@@ -145,7 +166,7 @@ export default function BlogPage() {
               </p>
               <Link 
                 href="/waitlist"
-                className="inline-flex items-center bg-accent hover:bg-accent-dark text-white px-6 py-3 rounded-lg font-medium transition-colors duration-300"
+                className="inline-flex items-center bg-accent hover:bg-accent-dark text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:transform hover:scale-105 hover:shadow-lg"
               >
                 Join Our Community
               </Link>
