@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import { Analytics } from "@vercel/analytics/next";
 import './globals.css';
+import React from 'react';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.pureresist.com'),
@@ -68,6 +69,18 @@ export const viewport: Viewport = {
   ],
 };
 
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "PureResist",
+  "url": "https://www.pureresist.com",
+  "logo": "https://www.pureresist.com/logo.png",
+  "sameAs": [
+    "https://www.instagram.com/pureresist/",
+    "https://www.twitter.com/pureresist/"
+  ]
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -75,6 +88,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
+      </head>
       <body className="bg-black text-text-primary min-h-screen selection:bg-accent selection:text-white overflow-x-hidden">
         {children}
         <Analytics />
