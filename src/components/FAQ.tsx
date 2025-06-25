@@ -25,8 +25,8 @@ const FAQ = () => {
 
   const faqs = [
     {
-      question: 'What is NoF*p and why should I try it?',
-      answer: 'NoF*p is a challenge where participants abstain from pornography and masturbation to break addictive cycles. Our users report life-changing benefits including 40% improved focus, 65% increased energy, deeper relationships, enhanced confidence, and mental clarity within just 30 days. Many describe it as "finally breaking free from invisible chains."'
+      question: 'What is NoFap and why should I try it?',
+      answer: 'NoFap is a challenge where participants abstain from pornography and masturbation to break addictive cycles. Our users report life-changing benefits including 40% improved focus, 65% increased energy, deeper relationships, enhanced confidence, and mental clarity within just 30 days. Many describe it as "finally breaking free from invisible chains."'
     },
     {
       question: 'How does PureResist help me succeed where I\'ve failed before?',
@@ -39,7 +39,19 @@ const FAQ = () => {
     {
       question: 'Do you offer refunds?',
       answer: "We stand behind our promise with a no-questions-asked 30-day money-back guarantee for premium subscriptions. If you don't experience meaningful benefits within your first month, we'll refund 100% of your payment. We're so confident in our approach that less than 2% of users request refunds."
-    }
+    },
+    {
+      question: 'How is PureResist different from other NoFap apps or quit porn apps?',
+      answer: 'PureResist is a neuroscience-backed NoFap app designed specifically for porn addiction recovery. Unlike generic habit trackers, we offer science-based tools, a supportive NoFap community, and real-time porn recovery support to help you stop watching porn and build lasting change.'
+    },
+    {
+      question: 'Can PureResist really help me overcome porn addiction?',
+      answer: 'Yes! Our quit porn app combines proven neuroscience, daily motivation, and a powerful porn recovery support system. Thousands have used PureResist to overcome porn addiction, track their progress, and join a community of people on the same journey.'
+    },
+    {
+      question: 'Is there a community for support on my porn recovery journey?',
+      answer: 'Absolutely. PureResist is not just a NoFap app—it\'s a NoFap community app. You can connect with others, share your story, and get encouragement and advice from people who understand the challenges of quitting porn.'
+    },
   ];
 
   const [openIndex, setOpenIndex] = useState<number | null>(null);

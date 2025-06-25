@@ -40,14 +40,14 @@ const Hero = () => {
               ref={titleRef}
               className="text-4xl md:text-6xl lg:text-6xl font-bold mb-4 gradient-text opacity-0 translate-y-8 transition-all duration-1000 ease-out"
             >
-The Ultimate <br></br>Quit Porn App
-</h1>
+              The Ultimate <br></br>
+              Quit Porn App
+            </h1>
             <p 
               ref={descriptionRef}
               className="text-lg md:text-xl text-text-secondary mb-6 max-w-2xl mx-auto md:mx-0 opacity-0 translate-y-8 transition-all duration-1000 ease-out delay-300"
             >
-              Track your journey, find daily motivation, and build lasting habits with our unique, community-driven approach. 
-            </p>
+The most effective NoFap app designed to help you break free from porn addiction, regain control, and rebuild your life.             </p>
             
             <div 
               ref={buttonsRef}
@@ -71,7 +71,7 @@ The Ultimate <br></br>Quit Porn App
                 <svg className="w-6 h-6 mr-2 inline-block" fill="currentColor" viewBox="0 0 512 512">
                   <path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z" />
                 </svg>
-                Google Play
+               Google Play Store
               </Link>
             </div>
           </div>

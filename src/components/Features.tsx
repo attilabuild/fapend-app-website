@@ -88,7 +88,7 @@ const Features = () => {
         }`}>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Features & Benefits</h2>
           <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-            Our app provides everything you need to succeed on your NoFap journey, from tracking to motivation and community support.
+            PureResist is the leading neuroscience-backed NoFap app and porn quitting app, designed to help you overcome porn addiction, join a supportive NoFap community, and reclaim your life. Discover powerful tools for porn recovery support, motivation, and lasting change.
           </p>
         </div>
 
@@ -105,7 +105,34 @@ const Features = () => {
                 {feature.icon}
               </div>
               <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
-              <p className="text-gray-300">{feature.description}</p>
+              <p className="text-gray-300">
+                {feature.title === 'Streak Tracking' && (
+                  'Track your NoFap streaks and milestones with our quit porn app. Celebrate progress and stay motivated on your porn addiction recovery journey.'
+                )}
+                {feature.title === 'Motivation Hub' && (
+                  'Get daily neuroscience-backed motivation, NoFap success stories, and proven benefits to help you stop watching porn and build new habits.'
+                )}
+                {feature.title === 'Urge Control' && (
+                  'Access emergency support and science-based techniques to overcome porn urges and stay strong in your NoFap community app.'
+                )}
+                {feature.title === 'Community Support' && (
+                  'Join a thriving NoFap community for porn recovery support, share your journey, and connect with others overcoming porn addiction.'
+                )}
+                {feature.title === 'Goal Setting' && (
+                  'Set personal goals, track healthy habits, and replace unwanted behaviors with positive routines using our porn quitting app.'
+                )}
+                {feature.title === 'Progress Analytics' && (
+                  'Gain insights into your porn recovery progress, triggers, and improvements with detailed analytics from the best NoFap app.'
+                )}
+                {![
+                  'Streak Tracking',
+                  'Motivation Hub',
+                  'Urge Control',
+                  'Community Support',
+                  'Goal Setting',
+                  'Progress Analytics'
+                ].includes(feature.title) && feature.description}
+              </p>
             </div>
           ))}
         </div>
