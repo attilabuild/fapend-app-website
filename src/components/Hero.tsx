@@ -32,7 +32,7 @@ const Hero = () => {
 
   return (
     <section id="hero" className="w-full bg-black py-16 overflow-hidden">
-      <div className="container mx-auto px-4 pt-24">
+      <div className="container mx-auto px-4 pt-24  md:pt-24 lg:pt-24 sm:pt-0 ">
         <div className="grid grid-cols-1 mt-20 md:grid-cols-2 items-center gap-2 max-w-6xl mx-auto mb-16">
           {/* Left side - Text Content */}
           <div className="order-1 mt-12 text-center md:text-left pr-0 md:pr-4">
@@ -86,7 +86,7 @@ The Ultimate <br></br>Quit Porn App
               <div className="absolute bottom-0 right-0 w-40 h-40 bg-gradient-blue-start rounded-full filter blur-[80px] opacity-20 -z-10 animate-pulse delay-1000"></div>
               
               <Image 
-                src="/pureresist.png" 
+                src="/pureresist.webp" 
                 alt="PureResist App Mockup" 
                 width={800} 
                 height={1000}

@@ -31,7 +31,7 @@ const Navbar = () => {
     } ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'}`}>
       <div className="container mx-auto px-4 flex justify-between items-center">
         <Link href="/" className="flex items-center transform hover:scale-105 transition-transform duration-300">
-          <img src='/logo.png' alt='PureResist Logo Navbar' className='w-10 h-10 mr-2'></img>
+          <img src='/logo.webp' alt='PureResist Logo Navbar' className='w-10 h-10 mr-2'></img>
           <h1>PureResist</h1>
         </Link>
 

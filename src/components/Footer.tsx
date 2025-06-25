@@ -26,7 +26,7 @@ const Footer = () => {
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}>
             <div className="flex items-center mb-4 transform hover:scale-105 transition-transform duration-300">
-              <img src='/logo.png' alt='PureResist Logo' className='w-10 h-10 mr-2' />
+              <img src='/logo.webp' alt='PureResist Logo' className='w-10 h-10 mr-2' />
               <h2 className="text-2xl font-bold">PureResist</h2>
             </div>
             <p className="text-text-secondary mb-4">
