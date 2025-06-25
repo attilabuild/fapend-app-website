@@ -32,7 +32,7 @@ const Hero = () => {
 
   return (
     <section id="hero" className="w-full bg-black py-16 overflow-hidden">
-      <div className="container mx-auto px-4 pt-24  md:pt-24 lg:pt-24 sm:pt-0 ">
+      <div className="container mx-auto px-4 pt-0 md:pt-24">
         <div className="grid grid-cols-1 mt-20 md:grid-cols-2 items-center gap-2 max-w-6xl mx-auto mb-16">
           {/* Left side - Text Content */}
           <div className="order-1 mt-12 text-center md:text-left pr-0 md:pr-4">

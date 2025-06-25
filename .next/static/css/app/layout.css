@@ -1204,8 +1204,8 @@ video {
 .pr-0 {
   padding-right: 0px;
 }
-.pt-24 {
-  padding-top: 6rem;
+.pt-0 {
+  padding-top: 0px;
 }
 .pt-6 {
   padding-top: 1.5rem;
@@ -1607,10 +1607,6 @@ body {
   .sm\:flex-row {
     flex-direction: row;
   }
-
-  .sm\:pt-0 {
-    padding-top: 0px;
-  }
 }
 
 @media (min-width: 768px) {
@@ -1698,10 +1694,6 @@ body {
 
   .lg\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
-  .lg\:pt-24 {
-    padding-top: 6rem;
   }
 
   .lg\:text-6xl {
