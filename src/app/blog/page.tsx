@@ -16,6 +16,15 @@ const blogPosts = [
     featured: true,
   },
   {
+    slug: 'best-nofap-apps',
+    title: 'Best NoFap Apps in 2024: Your Ultimate Guide to Success',
+    excerpt: 'Discover the top apps that can help you maintain your streak and overcome porn addiction. From tracking to community support, find the perfect tools for your journey.',
+    date: '2024-03-15',
+    readTime: '8 min read',
+    category: 'Tools',
+    featured: false,
+  },
+  {
     slug: 'nofap-benefits-science',
     title: 'The Science Behind NoFap: 7 Proven Benefits Backed by Research',
     excerpt: 'Explore the scientific evidence behind NoFap benefits including improved focus, energy, confidence, and overall well-being.',
