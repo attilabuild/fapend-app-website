@@ -60,7 +60,7 @@ const Hero = () => {
             </h1>
             <p 
               ref={descriptionRef}
-              className="text-md md:text-md text-gray-400 mb-8 max-w-1xl mx-auto opacity-0 translate-y-8 transition-all duration-1000 ease-out delay-300 px-8 sm:px-0 max-w-[280px] sm:max-w-2xl"
+              className="text-md md:text-md text-gray-400 mb-8 max-w-xl mx-auto opacity-0 translate-y-8 transition-all duration-1000 ease-out delay-300 px-8 sm:px-0 max-w-[280px] sm:max-w-2xl"
             >
               Backed by neuroscience and thousands of successful streaks.
             </p>
