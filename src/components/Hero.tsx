@@ -11,6 +11,7 @@ const instrumentSerif = localFont({
 });
 
 const Hero = () => {
+  const pillRef = useRef<HTMLDivElement>(null);
   const titleRef = useRef<HTMLHeadingElement>(null);
   const descriptionRef = useRef<HTMLParagraphElement>(null);
   const buttonsRef = useRef<HTMLDivElement>(null);
@@ -28,6 +29,7 @@ const Hero = () => {
       { threshold: 0.1 }
     );
 
+    if (pillRef.current) observer.observe(pillRef.current);
     if (titleRef.current) observer.observe(titleRef.current);
     if (descriptionRef.current) observer.observe(descriptionRef.current);
     if (buttonsRef.current) observer.observe(buttonsRef.current);
@@ -42,7 +44,10 @@ const Hero = () => {
         <div className="max-w-6xl mx-auto">
           {/* Text Content */}
           <div className="text-center mb-12 mt-20">
-            <div className="inline-block px-4 py-1.5 rounded-full border border-gray-800 bg-[#111111] text-white text-sm">
+            <div 
+              ref={pillRef}
+              className="inline-block px-4 py-1.5 rounded-full border border-gray-800 bg-[#111111] text-white text-sm opacity-0 translate-y-8 transition-all duration-1000 ease-out"
+            >
               The Ultimate NoFap App
             </div>
             <h1 
@@ -95,7 +100,7 @@ const Hero = () => {
             <div className="absolute top-0 left-1/4 w-1/2 h-full bg-gradient-to-b from-[#6C2BD9] opacity-20 blur-3xl -z-10"></div>
             <a href="https://apps.apple.com/rs/app/pureresist-quit-corn-now/id6745742828" target="_blank" rel="noopener noreferrer">
               <Image 
-                src="/mokcup1.png" 
+                src="/mokcup1.webp" 
                 alt="PureResist App Mockup" 
                 width={800} 
                 height={1000}
