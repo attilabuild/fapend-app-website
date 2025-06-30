@@ -1,0 +1,12 @@
+/*!***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[3].use[1]!./node_modules/next/dist/build/webpack/loaders/next-font-loader/index.js??ruleSet[1].rules[11].oneOf[3].use[2]!./node_modules/next/font/local/target.css?{"path":"src\\components\\Hero.tsx","import":"","arguments":[{"src":"../../fonts/InstrumentSerif-Italic.ttf","variable":"--font-instrument-serif"}],"variableName":"instrumentSerif"} ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+@font-face {
+font-family: '__instrumentSerif_7b0599';
+src: url(/_next/static/media/2c8e70aa2ead9fbf-s.p.ttf) format('truetype');
+font-display: swap;
+}@font-face {font-family: '__instrumentSerif_Fallback_7b0599';src: local("Arial");ascent-override: 121.98%;descent-override: 38.19%;line-gap-override: 0.00%;size-adjust: 81.16%
+}.__className_7b0599 {font-family: '__instrumentSerif_7b0599', '__instrumentSerif_Fallback_7b0599'
+}.__variable_7b0599 {--font-instrument-serif: '__instrumentSerif_7b0599', '__instrumentSerif_Fallback_7b0599'
+}
+
