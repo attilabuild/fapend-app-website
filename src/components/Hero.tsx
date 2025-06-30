@@ -60,18 +60,18 @@ const Hero = () => {
             </h1>
             <p 
               ref={descriptionRef}
-              className="text-md md:text-md text-gray-400 mb-8 max-w-2xl mx-auto opacity-0 translate-y-8 transition-all duration-1000 ease-out delay-300"
+              className="text-md md:text-md text-gray-400 mb-8 max-w-1xl mx-auto opacity-0 translate-y-8 transition-all duration-1000 ease-out delay-300 px-8 sm:px-0 max-w-[280px] sm:max-w-2xl"
             >
-            Backed by neuroscience and thousands of successful streaks.
+              Backed by neuroscience and thousands of successful streaks.
             </p>
             
             <div 
               ref={buttonsRef}
-              className="flex flex-col sm:flex-row justify-center gap-3 mb-12 opacity-0 translate-y-8 transition-all duration-1000 ease-out delay-500"
+              className="flex flex-col sm:flex-row justify-center gap-3 mb-12 opacity-0 translate-y-8 transition-all duration-1000 ease-out delay-500 px-12 sm:px-0"
             >
               <Link
                 href="https://apps.apple.com/rs/app/pureresist-quit-corn-now/id6745742828" 
-                className="group bg-[#0066FF]/10 hover:bg-[#0066FF]/20 backdrop-blur-sm text-white px-5 py-2.5 rounded-lg font-medium transform hover:scale-105 transition-all duration-300 hover:shadow-lg flex items-center justify-center border border-[#0066FF]/20 hover:border-[#0066FF]/30 min-w-[180px] text-sm"
+                className="group bg-[#0066FF]/10 hover:bg-[#0066FF]/20 backdrop-blur-sm text-white px-5 py-2.5 rounded-lg font-medium transform hover:scale-105 transition-all duration-300 hover:shadow-lg flex items-center justify-center border border-[#0066FF]/20 hover:border-[#0066FF]/30 text-sm w-full sm:w-auto min-w-[180px]"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -82,7 +82,7 @@ const Hero = () => {
               </Link>
               <Link
                 href="/waitlist"
-                className="group bg-[#1F1F1F] hover:bg-[#2A2A2A] text-white px-5 py-2.5 rounded-lg font-medium transform hover:scale-105 transition-all duration-300 hover:shadow-lg flex items-center justify-center border border-gray-800 hover:border-gray-700 min-w-[180px] text-sm"
+                className="group bg-[#1F1F1F] hover:bg-[#2A2A2A] text-white px-5 py-2.5 rounded-lg font-medium transform hover:scale-105 transition-all duration-300 hover:shadow-lg flex items-center justify-center border border-gray-800 hover:border-gray-700 text-sm w-full sm:w-auto min-w-[180px]"
               >
                 <svg className="w-4 h-4 mr-2 group-hover:scale-110 transition-transform duration-300" fill="currentColor" viewBox="0 0 512 512">
                   <path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z" />
