@@ -651,6 +651,9 @@ video {
 .mt-auto {
   margin-top: auto;
 }
+.mt-24 {
+  margin-top: 6rem;
+}
 .line-clamp-2 {
   overflow: hidden;
   display: -webkit-box;
@@ -1176,11 +1179,17 @@ video {
 .italic {
   font-style: italic;
 }
+.leading-\[0\.5\] {
+  line-height: 0.5;
+}
+.leading-\[1\.1\] {
+  line-height: 1.1;
+}
 .leading-relaxed {
   line-height: 1.625;
 }
-.leading-tight {
-  line-height: 1.25;
+.leading-\[0\.2\] {
+  line-height: 0.2;
 }
 .text-\[\#5865F2\] {
   --tw-text-opacity: 1;

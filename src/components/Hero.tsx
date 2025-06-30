@@ -43,7 +43,7 @@ const Hero = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           {/* Text Content */}
-          <div className="text-center mb-12 mt-20">
+          <div className="text-center mb-12 mt-24">
             <div 
               ref={pillRef}
               className="inline-block px-4 py-1.5 rounded-full border border-gray-800 bg-[#111111] text-white text-sm opacity-0 translate-y-8 transition-all duration-1000 ease-out"
@@ -52,15 +52,15 @@ const Hero = () => {
             </div>
             <h1 
               ref={titleRef}
-              className="text-4xl md:text-[70px] font-medium mb-4 text-white opacity-0 translate-y-8 transition-all duration-1000 ease-out leading-tight"
+              className="text-4xl md:text-[70px] font-medium mb-4 text-white opacity-0 translate-y-8 transition-all duration-1000 ease-out leading-[1.1]"
             >
               Rewire your brain,
-              <br />
+              <br className="leading-[0.2]" />
               <span className={`${instrumentSerif.className} font-normal`}>one day</span> <span className="font-medium">at a time.</span>
             </h1>
             <p 
               ref={descriptionRef}
-              className="text-lg md:text-xl text-gray-400 mb-8 max-w-2xl mx-auto opacity-0 translate-y-8 transition-all duration-1000 ease-out delay-300"
+              className="text-md md:text-md text-gray-400 mb-8 max-w-2xl mx-auto opacity-0 translate-y-8 transition-all duration-1000 ease-out delay-300"
             >
             Backed by neuroscience and thousands of successful streaks.
             </p>
@@ -100,7 +100,7 @@ const Hero = () => {
             <div className="absolute top-0 left-1/4 w-1/2 h-full bg-gradient-to-b from-[#6C2BD9] opacity-20 blur-3xl -z-10"></div>
             <a href="https://apps.apple.com/rs/app/pureresist-quit-corn-now/id6745742828" target="_blank" rel="noopener noreferrer">
               <Image 
-                src="/mokcup1.webp" 
+                src="/jokic.png" 
                 alt="PureResist App Mockup" 
                 width={800} 
                 height={1000}
