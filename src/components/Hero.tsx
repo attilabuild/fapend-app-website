@@ -70,7 +70,7 @@ const Hero = () => {
               className="flex flex-col sm:flex-row justify-center gap-3 mb-12 opacity-0 translate-y-8 transition-all duration-1000 ease-out delay-500 px-12 sm:px-0"
             >
               <Link
-                href="https://apps.apple.com/rs/app/pureresist-quit-corn-now/id6745742828" 
+                href="https://apps.apple.com/app/apple-store/id6745742828?pt=127826558&ct=website&mt=8" 
                 className="group bg-[#0066FF]/10 hover:bg-[#0066FF]/20 backdrop-blur-sm text-white px-5 py-2.5 rounded-lg font-medium transform hover:scale-105 transition-all duration-300 hover:shadow-lg flex items-center justify-center border border-[#0066FF]/20 hover:border-[#0066FF]/30 text-sm w-full sm:w-auto min-w-[180px]"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -98,7 +98,7 @@ const Hero = () => {
             className="relative max-w-3xl mx-auto opacity-0 translate-y-8 transition-all duration-1000 ease-out delay-700"
           >
             <div className="absolute top-0 left-1/4 w-1/2 h-full bg-gradient-to-b from-[#6C2BD9] opacity-20 blur-3xl -z-10"></div>
-            <a href="https://apps.apple.com/rs/app/pureresist-quit-corn-now/id6745742828" target="_blank" rel="noopener noreferrer">
+            <a href="https://apps.apple.com/app/apple-store/id6745742828?pt=127826558&ct=website&mt=8" target="_blank" rel="noopener noreferrer">
               <Image 
                 src="/mockup.webp" 
                 alt="PureResist App Mockup" 

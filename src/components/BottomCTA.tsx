@@ -49,7 +49,7 @@ const BottomCTA = () => {
             }`}
           >
             <Link
-              href="https://apps.apple.com/rs/app/pureresist-quit-corn-now/id6745742828"
+              href="https://apps.apple.com/app/apple-store/id6745742828?pt=127826558&ct=website&mt=8"
               className="bg-white text-black font-medium py-3 px-6 rounded-lg flex items-center justify-center hover:bg-gray-200 hover:transform hover:scale-105 hover:shadow-lg transition-all duration-300"
               target="_blank"
               rel="noopener noreferrer"

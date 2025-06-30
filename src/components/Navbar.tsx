@@ -61,7 +61,7 @@ const Navbar = () => {
 
         <div className="hidden md:block">
           <Link 
-            href="https://apps.apple.com/rs/app/pureresist-quit-corn-now/id6745742828" 
+            href="https://apps.apple.com/app/apple-store/id6745742828?pt=127826558&ct=website&mt=8" 
             className="group bg-[#0066FF]/10 hover:bg-[#0066FF]/20 backdrop-blur-sm text-white px-5 py-2.5 rounded-lg font-medium transform hover:scale-105 transition-all duration-300 hover:shadow-lg flex items-center justify-center border border-[#0066FF]/20 hover:border-[#0066FF]/30 text-sm"
             target="_blank"
             rel="noopener noreferrer"
@@ -121,7 +121,7 @@ const Navbar = () => {
               Contact
             </Link>
             <Link 
-              href="https://apps.apple.com/rs/app/pureresist-quit-corn-now/id6745742828" 
+              href="https://apps.apple.com/app/apple-store/id6745742828?pt=127826558&ct=website&mt=8" 
               className="group bg-[#0066FF]/10 hover:bg-[#0066FF]/20 backdrop-blur-sm text-white px-5 py-2.5 rounded-lg font-medium transform hover:scale-105 transition-all duration-300 hover:shadow-lg flex items-center justify-center border border-[#0066FF]/20 hover:border-[#0066FF]/30 text-sm"
               onClick={() => setMenuOpen(false)}
               target="_blank"
