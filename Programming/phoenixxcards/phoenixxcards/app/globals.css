@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --red-primary: #e63946;
+  --red-secondary: #ff4444;
+  --red-accent: #dc2626;
+  --dark-bg: #121212;
+  --dark-bg-secondary: #1e1e1e;
+  --dark-bg-tertiary: #1f1f1f;
+  --text-light: #e5e5e5;
+  --text-muted: #a3a3a3;
+  --text-dark: #525252;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-red-primary: var(--red-primary);
+  --color-red-secondary: var(--red-secondary);
+  --color-red-accent: var(--red-accent);
+  --color-dark-bg: var(--dark-bg);
+  --color-dark-bg-secondary: var(--dark-bg-secondary);
+  --color-dark-bg-tertiary: var(--dark-bg-tertiary);
+  --color-text-light: var(--text-light);
+  --color-text-muted: var(--text-muted);
+  --color-text-dark: var(--text-dark);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: var(--dark-bg);
+    --foreground: var(--text-light);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.6;
+}
+
+/* Custom animations */
+@keyframes glow {
+  0%, 100% { box-shadow: 0 0 5px rgba(230, 57, 70, 0.3); }
+  50% { box-shadow: 0 0 20px rgba(230, 57, 70, 0.6); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.glow-effect {
+  animation: glow 2s ease-in-out infinite;
+}
+
+.float-animation {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Smooth transitions */
+* {
+  transition: all 0.2s ease-in-out;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--dark-bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--red-primary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--red-secondary);
+}
