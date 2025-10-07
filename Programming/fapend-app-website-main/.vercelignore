@@ -1,0 +1,13 @@
+# Exclude unrelated local projects and build artifacts from Vercel uploads
+Programming/
+Design/
+.next/
+node_modules/
+.git/
+.DS_Store
+
+# Logs and temp files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+**/*.log
