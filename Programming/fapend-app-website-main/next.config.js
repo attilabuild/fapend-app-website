@@ -7,6 +7,14 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
+  // Exclude Programming and Design directories from webpack compilation
+  webpack: (config, { isServer }) => {
+    config.watchOptions = {
+      ...config.watchOptions,
+      ignored: ['**/Programming/**', '**/Design/**', '**/node_modules/**']
+    };
+    return config;
+  },
   async redirects() {
     return [
       {
