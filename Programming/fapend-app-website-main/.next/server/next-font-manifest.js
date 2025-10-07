@@ -1,0 +1,1 @@
+self.__NEXT_FONT_MANIFEST="{\"pages\":{},\"app\":{\"/Users/attilafeher/Work/Programming/fapend-app-website-main/src/app/page\":[\"static/media/2c8e70aa2ead9fbf-s.p.ttf\"]},\"appUsingSizeAdjust\":true,\"pagesUsingSizeAdjust\":false}"
