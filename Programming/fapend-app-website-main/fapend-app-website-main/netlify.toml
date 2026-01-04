@@ -1,0 +1,8 @@
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  SKIP_ENV_VALIDATION = "true"
+  NEXT_TELEMETRY_DISABLED = "1"
+

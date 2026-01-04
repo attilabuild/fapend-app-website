@@ -6,6 +6,8 @@ const nextConfig = {
   },
   eslint: {
     ignoreDuringBuilds: true,
+    // Explicitly disable ESLint during builds
+    dirs: [],
   },
   // Exclude Programming and Design directories from webpack compilation
   webpack: (config, { isServer }) => {

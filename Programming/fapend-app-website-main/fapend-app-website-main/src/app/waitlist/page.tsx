@@ -1,11 +1,17 @@
 "use client";
 
 import { useEffect } from "react";
-import Head from "next/head";
 import Navbar from "@/components/Navbar";
 
 export default function WaitlistPage() {
   useEffect(() => {
+    // Load GetWaitlist CSS
+    const link = document.createElement("link");
+    link.rel = "stylesheet";
+    link.type = "text/css";
+    link.href = "https://prod-waitlist-widget.s3.us-east-2.amazonaws.com/getwaitlist.min.css";
+    document.head.appendChild(link);
+
     // Load GetWaitlist script dynamically after component mounts
     const script = document.createElement("script");
     script.src = "https://prod-waitlist-widget.s3.us-east-2.amazonaws.com/getwaitlist.min.js";
@@ -13,8 +19,13 @@ export default function WaitlistPage() {
     document.body.appendChild(script);
     
     return () => {
-      // Clean up script when component unmounts
-      document.body.removeChild(script);
+      // Clean up script and link when component unmounts
+      if (document.body.contains(script)) {
+        document.body.removeChild(script);
+      }
+      if (document.head.contains(link)) {
+        document.head.removeChild(link);
+      }
     };
   }, []);
 
@@ -28,13 +39,6 @@ export default function WaitlistPage() {
           data-waitlist_id="27139" 
           data-widget_type="WIDGET_1"
           className="mx-auto"
-        />
-        
-        {/* Link the CSS directly in the component */}
-        <link 
-          rel="stylesheet" 
-          type="text/css" 
-          href="https://prod-waitlist-widget.s3.us-east-2.amazonaws.com/getwaitlist.min.css"
         />
       </div>
     </main>
