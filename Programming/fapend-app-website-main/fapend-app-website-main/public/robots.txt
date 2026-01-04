@@ -1,0 +1,17 @@
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.pureresist.com/sitemap.xml
+
+# Disallow admin or private areas
+Disallow: /api/
+Disallow: /_next/
+Disallow: /admin/
+
+# Allow important pages
+Allow: /blog/
+Allow: /contact/
+Allow: /privacy/
+Allow: /terms/ 

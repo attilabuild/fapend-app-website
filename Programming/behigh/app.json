@@ -1,0 +1,66 @@
+{
+  "expo": {
+    "name": "BeHigh",
+    "slug": "behigh",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "newArchEnabled": true,
+    "backgroundColor": "#000000",
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#000000"
+    },
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.behigh.app",
+      "userInterfaceStyle": "dark",
+      "infoPlist": {
+        "NSCameraUsageDescription": "This app needs access to your camera to capture photos for your daily moments.",
+        "NSPhotoLibraryUsageDescription": "This app needs access to your photo library to save and share your moments.",
+        "NSMicrophoneUsageDescription": "This app needs access to your microphone for video moments."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#000000"
+      },
+      "package": "com.behigh.app",
+      "permissions": [
+        "CAMERA",
+        "WRITE_EXTERNAL_STORAGE",
+        "READ_EXTERNAL_STORAGE"
+      ],
+      "edgeToEdgeEnabled": true,
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow BeReal to access your camera to capture moments."
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/icon.png",
+          "color": "#000000"
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "your-project-id-here"
+      },
+      "supabaseUrl": "https://qtydvrvgxsfkoapbcpgh.supabase.co",
+      "supabaseAnonKey": "sb_publishable_iJPIbC8OqY5XkuW6nW9UQQ_PzyUNgty"
+    }
+  }
+}

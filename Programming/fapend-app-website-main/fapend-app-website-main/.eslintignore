@@ -1,0 +1,4 @@
+Programming/
+.next/
+**/*.log
+node_modules/
