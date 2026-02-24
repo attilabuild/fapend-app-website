@@ -1,0 +1,37 @@
+Programming/PureResist-dev/package.json
+  daa6f3412fd0cd39 1-21,23,25-35,37-38,41-42,44-50,52-54,57-64,66-71,75-78,80-87,89,91-112
+  3bc3c135d3394a34 40,43,51,55-56,65,72-73,90
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.1.4",
+  "base_commit_sha": "9247957070924c49151642cc714da815e678d7dd",
+  "prompts": {
+    "3bc3c135d3394a34": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "723dbf88-e678-4080-9331-ca70213b81a3",
+        "model": "claude-4-sonnet"
+      },
+      "human_author": "attilabuild <tutorialforhungary@gmail.com>",
+      "messages": [],
+      "total_additions": 2815,
+      "total_deletions": 83,
+      "accepted_lines": 2742,
+      "overriden_lines": 1
+    },
+    "daa6f3412fd0cd39": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "e6676dea-45b1-461c-b1bb-806fe2e7df5d",
+        "model": "default"
+      },
+      "human_author": "attilabuild <tutorialforhungary@gmail.com>",
+      "messages": [],
+      "total_additions": 3685,
+      "total_deletions": 18,
+      "accepted_lines": 3643,
+      "overriden_lines": 3
+    }
+  }
+}
