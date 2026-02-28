@@ -1,0 +1,29 @@
+App.tsx
+  3bc3c135d3394a34 3,242,262,271,274-278,482-487
+components/SplashScreen.tsx
+  3bc3c135d3394a34 1-2,4-12,15-18,22,29-36,58-61
+eas.json
+  3bc3c135d3394a34 48
+modules/web-content-blocker/ios/WebContentBlockerModule.swift
+  3bc3c135d3394a34 72,117-118
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.1.6",
+  "base_commit_sha": "cda5ea6993732b7ea765a68034fdc7b5782d81db",
+  "prompts": {
+    "3bc3c135d3394a34": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "723dbf88-e678-4080-9331-ca70213b81a3",
+        "model": "default"
+      },
+      "human_author": "attilabuild <tutorialforhungary@gmail.com>",
+      "messages": [],
+      "total_additions": 63,
+      "total_deletions": 38,
+      "accepted_lines": 50,
+      "overriden_lines": 0
+    }
+  }
+}
