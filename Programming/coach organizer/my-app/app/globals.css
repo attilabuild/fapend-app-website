@@ -1,0 +1,266 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #111111;
+  --gray-50: #f9fafb;
+  --gray-100: #f3f4f6;
+  --gray-200: #e5e7eb;
+  --gray-300: #d1d5db;
+  --gray-400: #9ca3af;
+  --gray-500: #6b7280;
+  --gray-600: #4b5563;
+  --green-light: #e8f5e9;
+  --green-muted: #c5d5c0;
+  --ease-out-smooth: cubic-bezier(0.25, 0.1, 0.25, 1);
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-instrument-sans);
+  --font-serif: var(--font-instrument-serif);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-instrument-sans), system-ui, -apple-system, sans-serif;
+  font-weight: 400;
+  overflow-x: hidden;
+}
+
+.font-serif-italic {
+  font-family: var(--font-instrument-serif), Georgia, "Times New Roman", serif;
+  font-style: italic;
+}
+
+/* ── Marquee ── */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 28s linear infinite;
+}
+
+.animate-marquee-reverse {
+  animation: marquee 32s linear infinite reverse;
+}
+
+/* ── Scroll-triggered reveal ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s var(--ease-out-smooth), transform 0.6s var(--ease-out-smooth);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-24px);
+  transition: opacity 0.6s var(--ease-out-smooth), transform 0.6s var(--ease-out-smooth);
+}
+
+.reveal-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(24px);
+  transition: opacity 0.6s var(--ease-out-smooth), transform 0.6s var(--ease-out-smooth);
+}
+
+.reveal-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.98);
+  transition: opacity 0.6s var(--ease-out-smooth), transform 0.6s var(--ease-out-smooth);
+}
+
+.reveal-scale.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Stagger delays */
+.delay-100 { transition-delay: 100ms; }
+.delay-200 { transition-delay: 200ms; }
+.delay-300 { transition-delay: 300ms; }
+.delay-400 { transition-delay: 400ms; }
+.delay-500 { transition-delay: 500ms; }
+.delay-600 { transition-delay: 600ms; }
+.delay-700 { transition-delay: 700ms; }
+
+/* ── Hero load animation ── */
+@keyframes hero-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-animate {
+  animation: hero-fade-in 0.65s var(--ease-out-smooth) forwards;
+  opacity: 0;
+}
+
+.hero-delay-1 { animation-delay: 0.08s; }
+.hero-delay-2 { animation-delay: 0.18s; }
+.hero-delay-3 { animation-delay: 0.28s; }
+.hero-delay-4 { animation-delay: 0.38s; }
+.hero-delay-5 { animation-delay: 0.48s; }
+.hero-delay-6 { animation-delay: 0.58s; }
+
+/* ── Gradient border ── */
+.gradient-border {
+  background: linear-gradient(135deg, #c5d5c0, #d4a574, #e8c4a0, #b8c4a8, #d5b8a0);
+  padding: 2px;
+  border-radius: 24px;
+}
+
+.gradient-border-inner {
+  background: white;
+  border-radius: 22px;
+  padding: 40px 32px;
+}
+
+/* ── Float animation (subtle) ── */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+@keyframes float-alt {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+.animate-float {
+  animation: float 5s var(--ease-out-smooth) infinite;
+}
+
+.animate-float-delay {
+  animation: float-alt 6s var(--ease-out-smooth) infinite;
+  animation-delay: -2s;
+}
+
+.animate-float-slow {
+  animation: float 7s var(--ease-out-smooth) infinite;
+  animation-delay: -3s;
+}
+
+.animate-float-fast {
+  animation: float-alt 4.5s var(--ease-out-smooth) infinite;
+  animation-delay: -1s;
+}
+
+/* ── Tab content transition ── */
+@keyframes tab-slide-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.tab-content-enter {
+  animation: tab-slide-in 0.4s var(--ease-out-smooth) forwards;
+}
+
+/* Client/Coach card image: transparent at top, visible from bottom */
+.card-feature-img {
+  object-position: top;
+  mask-image: linear-gradient(to bottom, black 20%, transparent);
+  -webkit-mask-image: linear-gradient(to bottom, black 20%, transparent);
+}
+
+/* ── Carousel auto-play fade ── */
+@keyframes carousel-fade {
+  0%, 85% { opacity: 1; }
+  95% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* ── Button hover pulse ── */
+.btn-primary {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(255,255,255,0.15), transparent 70%);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.btn-primary:hover::after {
+  opacity: 1;
+}
+
+/* ── Hero popup card ── */
+@keyframes popup-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-popup-card {
+  animation: popup-in 0.45s var(--ease-out-smooth) forwards;
+}
+
+/* ── Hero slider: two-layer slide (no white flash) ── */
+@keyframes hero-slide-in {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+
+@keyframes hero-slide-out {
+  from { transform: translateX(0); }
+  to { transform: translateX(-100%); }
+}
+
+.hero-slide-in {
+  animation: hero-slide-in 1s var(--ease-out-smooth) forwards;
+  z-index: 0;
+}
+
+.hero-slide-out {
+  animation: hero-slide-out 1s var(--ease-out-smooth) forwards;
+  z-index: 1;
+}
