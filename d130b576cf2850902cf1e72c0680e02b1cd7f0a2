@@ -1,0 +1,66 @@
+Programming/PureResist-working-porn-blocker/package.json
+  1f139226d7ba734a 1-108
+Programming/PureResist-working-porn-blocker/babel.config.js
+  1f139226d7ba734a 1-18
+Programming/PureResist-working-porn-blocker/eas.json
+  1f139226d7ba734a 1-71
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.1.7",
+  "base_commit_sha": "d130b576cf2850902cf1e72c0680e02b1cd7f0a2",
+  "prompts": {
+    "1f139226d7ba734a": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "7b3d39da-ebee-455e-9cfd-bad398fccbc2",
+        "model": "default"
+      },
+      "human_author": "attilabuild <tutorialforhungary@gmail.com>",
+      "messages": [],
+      "total_additions": 71,
+      "total_deletions": 0,
+      "accepted_lines": 197,
+      "overriden_lines": 0
+    },
+    "3bc3c135d3394a34": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "723dbf88-e678-4080-9331-ca70213b81a3",
+        "model": "default"
+      },
+      "human_author": "attilabuild <tutorialforhungary@gmail.com>",
+      "messages": [],
+      "total_additions": 0,
+      "total_deletions": 0,
+      "accepted_lines": 2766,
+      "overriden_lines": 0
+    },
+    "daa6f3412fd0cd39": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "e6676dea-45b1-461c-b1bb-806fe2e7df5d",
+        "model": "default"
+      },
+      "human_author": "attilabuild <tutorialforhungary@gmail.com>",
+      "messages": [],
+      "total_additions": 0,
+      "total_deletions": 0,
+      "accepted_lines": 3547,
+      "overriden_lines": 0
+    },
+    "edaface1243f632c": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "7e31ac7f-c853-4868-8ef0-61c32a722d99",
+        "model": "default"
+      },
+      "human_author": "attilabuild <tutorialforhungary@gmail.com>",
+      "messages": [],
+      "total_additions": 0,
+      "total_deletions": 0,
+      "accepted_lines": 1952,
+      "overriden_lines": 0
+    }
+  }
+}
