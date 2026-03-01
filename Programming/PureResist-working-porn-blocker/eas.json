@@ -1,0 +1,71 @@
+{
+  "cli": {
+    "version": ">= 16.0.0",
+    "appVersionSource": "remote"
+  },
+  "build": {
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal",
+      "ios": {
+        "resourceClass": "m-medium",
+        "image": "latest",
+        "simulator": true,
+        "cache": {
+          "disabled": true
+        }
+      },
+      "env": {
+        "EXPO_PUBLIC_SKIP_DOTLOTTIE": "true"
+      }
+    },
+    "preview": {
+      "developmentClient": true,
+      "distribution": "internal",
+      "ios": {
+        "simulator": false,
+        "image": "latest",
+        "cache": {
+          "disabled": true
+        }
+      },
+      "env": {
+        "REVENUECAT_API_KEY_IOS": "appl_kKywePgbpuTaCsmTCpiwkcTRijl",
+        "REVENUECAT_API_KEY_ANDROID": "goog_nFgMYKrYoXvNQPdCwyhpgYlcPJK",
+        "EXPO_PUBLIC_SKIP_DOTLOTTIE": "true"
+      },
+      "android": {
+        "buildType": "apk"
+      },
+      "channel": "preview"
+    },
+    "production": {
+      "ios": {
+        "resourceClass": "m-medium",
+        "buildConfiguration": "Release",
+        "credentialsSource": "remote",
+        "distribution": "store",
+        "image": "latest",
+        "cache": {
+          "disabled": true
+        }
+      },
+      "env": {
+        "REVENUECAT_API_KEY_IOS": "appl_kKywePgbpuTaCsmTCpiwkcTRijl",
+        "REVENUECAT_API_KEY_ANDROID": "goog_nFgMYKrYoXvNQPdCwyhpgYlcPJK",
+        "EXPO_PUBLIC_SKIP_DOTLOTTIE": "true"
+      },
+      "channel": "production",
+      "autoIncrement": true
+    }
+  },
+  "submit": {
+    "production": {
+      "ios": {
+        "appleId": "feherati64@gmail.com",
+        "ascAppId": "6745742828",
+        "appleTeamId": "WBV887624C"
+      }
+    }
+  }
+}

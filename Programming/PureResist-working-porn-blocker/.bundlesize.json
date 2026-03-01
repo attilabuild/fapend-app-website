@@ -1,0 +1,20 @@
+[
+  {
+    "path": "./dist/bundle.js",
+    "maxSize": "2MB",
+    "compression": "gzip"
+  },
+  {
+    "path": "./dist/assets/**/*.js",
+    "maxSize": "500KB",
+    "compression": "gzip"
+  },
+  {
+    "path": "./dist/assets/**/*.png",
+    "maxSize": "200KB"
+  },
+  {
+    "path": "./dist/assets/**/*.jpg",
+    "maxSize": "150KB"
+  }
+] 

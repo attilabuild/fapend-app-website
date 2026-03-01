@@ -1,0 +1,9 @@
+{
+  "platforms": ["apple"],
+  "apple": {
+    "modules": ["WebContentBlockerModule"]
+  },
+  "android": {
+    "modules": ["expo.modules.webcontentblocker.WebContentBlockerModule"]
+  }
+}
