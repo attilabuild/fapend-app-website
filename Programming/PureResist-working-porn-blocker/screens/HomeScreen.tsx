@@ -37,7 +37,6 @@ import {
   updateUserLastRelapse,
 } from "../services/api";
 import { Video, ResizeMode } from "expo-av";
-import * as Notifications from "expo-notifications";
 import WeeklyCheckinView from "../components/WeeklyCheckinView";
 import {
   isFirstDayAutoCheckin,

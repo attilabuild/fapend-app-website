@@ -26,10 +26,8 @@ import { COLORS, SPACING } from "./utils/theme";
 import { initializeDatabase } from "./utils/databaseSync";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import * as api from "./services/api";
-import * as Notifications from "expo-notifications";
 import Constants from "expo-constants";
 import { Ionicons } from "@expo/vector-icons";
-import { PostHogProvider } from "posthog-react-native";
 
 // Tab Bar
 import TabBar from "./components/navigation/TabBar";
@@ -235,7 +233,6 @@ import { NotificationProvider } from "hooks/useNotifications";
 import Header from "components/navigation/Header";
 import { POSTHOG_API_KEY, POSTHOG_HOST } from "config";
 import AppNavigator from "navigation/AppNavigator";
-import { posthog } from "lib/posthog";
 
 export default function App() {
   const { isAuthenticated, user, restoreAuth } = useAuthStore();
@@ -254,6 +251,9 @@ export default function App() {
   useEffect(() => {
     const initializeApp = async () => {
       try {
+        // Defer first I/O to avoid native file-system race at launch (iOS 26+ crash in FileSystemModule.getPathPermissions)
+        await new Promise((resolve) => setTimeout(resolve, 200));
+
         // Initialize local storage silently
         await AsyncStorage.getItem("auth_state");
 
@@ -319,19 +319,11 @@ export default function App() {
         <NetworkStatus />
         <StatusBar style="light" />
         <NavigationContainer>
-          <PostHogProvider
-            client={posthog}
-            autocapture={{
-              captureScreens: false,
-              captureTouches: true,
-            }}
-          >
-            <RevenueCatProvider>
-              <NotificationProvider>
-                <AppNavigator />
-              </NotificationProvider>
-            </RevenueCatProvider>
-          </PostHogProvider>
+          <RevenueCatProvider>
+            <NotificationProvider>
+              <AppNavigator />
+            </NotificationProvider>
+          </RevenueCatProvider>
         </NavigationContainer>
       </SafeAreaProvider>
     </ErrorBoundary>

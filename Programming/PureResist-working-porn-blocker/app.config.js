@@ -8,7 +8,7 @@ module.exports = ({ config }) => {
     owner: "designaxe",
     name: "PureResist",
     slug: "pureresist",
-    version: "1.0.39",
+    version: "1.0.42",
     orientation: "portrait",
     icon: "./assets/icon.png",
     userInterfaceStyle: "light",
@@ -27,7 +27,7 @@ module.exports = ({ config }) => {
         NSFamilyControlsUsageDescription:
           "This app uses Screen Time API to help you block inappropriate content and maintain your recovery goals.",
       },
-      buildNumber: "100",
+      buildNumber: "103",
       deploymentTarget: "16.0",
       entitlements: {
         "com.apple.developer.family-controls": true,
@@ -42,8 +42,8 @@ module.exports = ({ config }) => {
         backgroundColor: "#ffffff",
       },
       package: "com.pureresist.nofapapp",
-      permissions: ["NOTIFICATIONS"],
-      versionCode: 6,
+      permissions: [],
+      versionCode: 9,
       // Performance optimizations
       enableProguardInReleaseBuilds: true,
       enableSeparateBuildPerCPUArchitecture: true,
@@ -51,21 +51,7 @@ module.exports = ({ config }) => {
     web: {
       favicon: "./assets/favicon.png",
     },
-    notification: {
-      icon: "./assets/notification-icon.png",
-      color: "#5D5FEF",
-      iosDisplayInForeground: true,
-      androidMode: "default",
-      androidCollapsedTitle: "NoFap App",
-    },
     plugins: [
-      [
-        "expo-notifications",
-        {
-          icon: "./assets/notification-icon.png",
-          color: "#5D5FEF",
-        },
-      ],
       "expo-apple-authentication",
       [
         "expo-build-properties",

@@ -17,7 +17,6 @@ import { Ionicons } from "@expo/vector-icons";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import * as api from "../services/api";
 import Constants from "expo-constants";
-import { captureEvent, POST_HOG_EVENTS } from "lib/posthog";
 import Purchases from "react-native-purchases";
 
 // Check if running in Expo Go

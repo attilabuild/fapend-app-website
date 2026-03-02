@@ -1,22 +1,16 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { View, Text, Image, StyleSheet, TouchableOpacity } from "react-native";
 import { COLORS } from "../utils/theme";
 // @ts-ignore
 import { useNavigation } from "@react-navigation/native";
 import { Video, ResizeMode } from "expo-av";
-import { captureScreen, POST_HOG_EVENTS, POST_HOG_SCREENS } from "lib/posthog";
 
 const CongratulationsScreen = () => {
   const navigation = useNavigation();
 
   const handleGetStarted = () => {
-    captureScreen(POST_HOG_EVENTS.SIGN_IN);
     navigation.replace("Login");
   };
-
-  useEffect(() => {
-    captureScreen(POST_HOG_SCREENS.WELCOME);
-  }, []);
 
   return (
     <View style={styles.container}>

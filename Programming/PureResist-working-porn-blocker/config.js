@@ -35,10 +35,6 @@ export const REVENUECAT_API_KEYS = {
   android: "goog_nFgMYKrYoXvNQPdCwyhpgYlcPJK",
 };
 
-export const POSTHOG_API_KEY =
-  "phc_elri2DEw3lZRO2aNUyLoPeTy4oeJi2nwr9il14EBwIi";
-export const POSTHOG_HOST = "https://us.i.posthog.com";
-
 // Export all config
 export default {
   API_BASE_URL,
@@ -46,6 +42,4 @@ export default {
   THEME,
   DEFAULT_SETTINGS,
   STORAGE_KEYS,
-  POSTHOG_API_KEY,
-  POSTHOG_HOST,
 };

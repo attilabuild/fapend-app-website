@@ -3,7 +3,7 @@
     "owner": "designaxe",
     "name": "PureResist",
     "slug": "pureresist",
-    "version": "1.0.39",
+    "version": "1.0.42",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -21,7 +21,7 @@
         "CFBundleAllowMixedLocalizations": true,
         "NSFamilyControlsUsageDescription": "This app uses Family controls to help you block adult content and maintain your recovery journey by preventing access to inappropriate websites."
       },
-      "buildNumber": "100",
+      "buildNumber": "103",
       "config": {
         "usesNonExemptEncryption": false
       },
@@ -35,30 +35,14 @@
         "backgroundColor": "#ffffff"
       },
       "package": "com.pureresist.nofapapp",
-      "permissions": [
-        "NOTIFICATIONS"
-      ],
-      "versionCode": 7
+      "permissions": [],
+      "versionCode": 9
     },
     "web": {
       "favicon": "./assets/favicon.png"
     },
-    "notification": {
-      "icon": "./assets/notification-icon.png",
-      "color": "#5D5FEF",
-      "iosDisplayInForeground": true,
-      "androidMode": "default",
-      "androidCollapsedTitle": "NoFap App"
-    },
     "plugins": [
       "expo-localization",
-      [
-        "expo-notifications",
-        {
-          "icon": "./assets/notification-icon.png",
-          "color": "#5D5FEF"
-        }
-      ],
       "expo-apple-authentication",
       [
         "expo-build-properties",

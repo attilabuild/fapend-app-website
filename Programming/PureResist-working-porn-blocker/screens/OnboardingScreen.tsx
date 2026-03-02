@@ -31,14 +31,6 @@ import { saveSurveyAnswers, SurveyAnswers } from "../services/api";
 import LottieView from "lottie-react-native";
 import LottieIcon from "../components/ui/LottieIcon";
 import * as StoreReview from "expo-store-review";
-import {
-  captureEvent,
-  captureScreen,
-  POST_HOG_EVENTS,
-  POST_HOG_SCREENS,
-  posthog,
-} from "lib/posthog";
-
 // Define the navigation types
 type RootStackParamList = {
   PaywallScreen: undefined;
@@ -853,9 +845,6 @@ const OnboardingScreen = () => {
                   styles.surveyOptionButtonSelected,
               ]}
               onPress={() => {
-                captureEvent(POST_HOG_EVENTS.SURVEY_PROBLEM_RECOGNITION, {
-                  answer: option,
-                });
                 setSelectedProblemRecognition(option);
                 setTimeout(nextSurveyScreen, 500);
               }}
@@ -914,9 +903,6 @@ const OnboardingScreen = () => {
                   styles.surveyOptionButtonSelected,
               ]}
               onPress={() => {
-                captureEvent(POST_HOG_EVENTS.SURVEY_HABIT_DURATION, {
-                  answer: option,
-                });
                 setSelectedHabitDuration(option);
                 setTimeout(nextSurveyScreen, 500);
               }}
@@ -948,9 +934,6 @@ const OnboardingScreen = () => {
         ]}
         onPress={() => {
           if (selectedEmotionalConsequences.length > 0) {
-            captureEvent(POST_HOG_EVENTS.SURVEY_EMOTIONAL_CONSEQUENCES, {
-              answer: selectedEmotionalConsequences,
-            });
             setTimeout(nextSurveyScreen, 500);
           }
         }}
@@ -1055,9 +1038,6 @@ const OnboardingScreen = () => {
                   styles.surveyOptionButtonSelected,
               ]}
               onPress={() => {
-                captureEvent(POST_HOG_EVENTS.SURVEY_IDENTITY_CONFLICT, {
-                  answer: option,
-                });
                 setSelectedIdentityConflict(option);
                 setTimeout(nextSurveyScreen, 500);
               }}
@@ -1116,9 +1096,6 @@ const OnboardingScreen = () => {
                   styles.surveyOptionButtonSelected,
               ]}
               onPress={() => {
-                captureEvent(POST_HOG_EVENTS.SURVEY_ACTUAL_LOSS_OF_CONTROL, {
-                  answer: option,
-                });
                 setSelectedLossOfControl(option);
                 setTimeout(nextSurveyScreen, 500);
               }}
@@ -1149,9 +1126,6 @@ const OnboardingScreen = () => {
         ]}
         onPress={() => {
           if (selectedTriggers.length > 0) {
-            captureEvent(POST_HOG_EVENTS.SURVEY_TRIGGERS, {
-              answer: selectedTriggers,
-            });
             setTimeout(nextSurveyScreen, 500);
           }
         }}
@@ -1266,9 +1240,6 @@ const OnboardingScreen = () => {
                   styles.surveyOptionButtonSelected,
               ]}
               onPress={() => {
-                captureEvent(POST_HOG_EVENTS.SURVEY_FAILED_ATTEMPTS, {
-                  answer: option,
-                });
                 setSelectedFailedAttempts(option);
                 setTimeout(nextSurveyScreen, 500);
               }}
@@ -1327,9 +1298,6 @@ const OnboardingScreen = () => {
                   styles.surveyOptionButtonSelected,
               ]}
               onPress={() => {
-                captureEvent(POST_HOG_EVENTS.SURVEY_TIME_SPENT, {
-                  answer: option,
-                });
                 setSelectedTimeSpent(option);
                 setTimeout(nextSurveyScreen, 500);
               }}
@@ -1388,9 +1356,6 @@ const OnboardingScreen = () => {
                   styles.surveyOptionButtonSelected,
               ]}
               onPress={() => {
-                captureEvent(POST_HOG_EVENTS.SURVEY_SUCCESS_VISION, {
-                  answer: option,
-                });
                 setSelectedSuccessVision(option);
                 setTimeout(nextSurveyScreen, 500);
               }}
@@ -1453,9 +1418,6 @@ const OnboardingScreen = () => {
                 setSelectedReadyForChallenge(option);
                 setTimeout(async () => {
                   try {
-                    captureEvent(POST_HOG_EVENTS.SURVEY_READY_FOR_CHALLENGE, {
-                      answer: option,
-                    });
                     await saveSurveyData();
                     setSurveyStarted(false);
                     
@@ -2048,9 +2010,7 @@ const OnboardingScreen = () => {
     });
   };
 
-  useEffect(() => {
-    captureScreen(POST_HOG_SCREENS.ONBOARDING);
-  }, []);
+  useEffect(() => {}, []);
 
   return (
     <SafeAreaView style={styles.container}>
