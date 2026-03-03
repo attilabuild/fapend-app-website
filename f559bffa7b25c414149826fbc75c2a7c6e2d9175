@@ -1,0 +1,76 @@
+Programming/PureResist-working-porn-blocker/app.config.js
+  1f139226d7ba734a 11,30,46
+Programming/PureResist-working-porn-blocker/eas.json
+  1f139226d7ba734a 3-4
+Programming/PureResist-working-porn-blocker/screens/SettingsScreen.tsx
+  1f139226d7ba734a 20,29,53-57
+Programming/PureResist-working-porn-blocker/package.json
+  1f139226d7ba734a 77
+Programming/PureResist-working-porn-blocker/app.json
+  1f139226d7ba734a 6,24,39
+Programming/PureResist-working-porn-blocker/.easignore
+  1f139226d7ba734a 1-2,5,8,10-11,14-15
+Programming/PureResist-working-porn-blocker/hooks/useRevenueCat.tsx
+  1f139226d7ba734a 2,21-22,29-30,41-42,44-64,67,75-79,85,92-101,107-112,223
+Programming/PureResist-working-porn-blocker/screens/PaywallScreen.tsx
+  1f139226d7ba734a 1,3,7-20
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.1.7",
+  "base_commit_sha": "f559bffa7b25c414149826fbc75c2a7c6e2d9175",
+  "prompts": {
+    "1f139226d7ba734a": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "7b3d39da-ebee-455e-9cfd-bad398fccbc2",
+        "model": "default"
+      },
+      "human_author": "attilabuild <tutorialforhungary@gmail.com>",
+      "messages": [],
+      "total_additions": 116,
+      "total_deletions": 69,
+      "accepted_lines": 96,
+      "overriden_lines": 0
+    },
+    "3bc3c135d3394a34": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "723dbf88-e678-4080-9331-ca70213b81a3",
+        "model": "default"
+      },
+      "human_author": "attilabuild <tutorialforhungary@gmail.com>",
+      "messages": [],
+      "total_additions": 0,
+      "total_deletions": 0,
+      "accepted_lines": 2766,
+      "overriden_lines": 0
+    },
+    "daa6f3412fd0cd39": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "e6676dea-45b1-461c-b1bb-806fe2e7df5d",
+        "model": "default"
+      },
+      "human_author": "attilabuild <tutorialforhungary@gmail.com>",
+      "messages": [],
+      "total_additions": 0,
+      "total_deletions": 0,
+      "accepted_lines": 3547,
+      "overriden_lines": 0
+    },
+    "edaface1243f632c": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "7e31ac7f-c853-4868-8ef0-61c32a722d99",
+        "model": "default"
+      },
+      "human_author": "attilabuild <tutorialforhungary@gmail.com>",
+      "messages": [],
+      "total_additions": 0,
+      "total_deletions": 0,
+      "accepted_lines": 1952,
+      "overriden_lines": 0
+    }
+  }
+}
