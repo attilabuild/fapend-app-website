@@ -3,7 +3,7 @@
     "owner": "designaxe",
     "name": "PureResist",
     "slug": "pureresist",
-    "version": "1.0.42",
+    "version": "1.0.44",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -21,7 +21,7 @@
         "CFBundleAllowMixedLocalizations": true,
         "NSFamilyControlsUsageDescription": "This app uses Family controls to help you block adult content and maintain your recovery journey by preventing access to inappropriate websites."
       },
-      "buildNumber": "103",
+      "buildNumber": "107",
       "config": {
         "usesNonExemptEncryption": false
       },
@@ -36,7 +36,7 @@
       },
       "package": "com.pureresist.nofapapp",
       "permissions": [],
-      "versionCode": 9
+      "versionCode": 11
     },
     "web": {
       "favicon": "./assets/favicon.png"

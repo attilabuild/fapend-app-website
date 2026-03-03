@@ -1,16 +1,18 @@
-# Ignore node_modules except for specific iOS dependencies
-node_modules/**/*
-!node_modules/@lottiefiles/dotlottie-react-native/ios/**/*
-!node_modules/react-native-purchases/ios/**/*
+# Ignore node_modules — EAS runs npm install on the server
+node_modules/
 
 # Ignore git files
-.git
+.git/
 .gitignore
 
-# Ignore build artifacts
+# Ignore build artifacts (keeps archive small, avoids upload timeouts)
 android/app/build
+android/build
+android/.gradle
 ios/build
 ios/Pods
+ios/*.xcworkspace
+.expo/
 
 # Ignore development files
 *.log

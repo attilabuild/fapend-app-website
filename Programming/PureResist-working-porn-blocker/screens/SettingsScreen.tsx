@@ -17,7 +17,7 @@ import { Ionicons } from "@expo/vector-icons";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import * as api from "../services/api";
 import Constants from "expo-constants";
-import Purchases from "react-native-purchases";
+import useRevenueCat from "hooks/useRevenueCat";
 
 // Check if running in Expo Go
 const isExpoGo = Constants.appOwnership === "expo";
@@ -26,6 +26,7 @@ const SettingsScreen = () => {
   const navigation = useNavigation();
   const { user, logout } = useAuthStore();
   const { pushNotifications, togglePushNotifications } = useSettingsStore();
+  const { getCustomerInfo } = useRevenueCat();
 
   const handleLogout = async () => {
     try {
@@ -49,7 +50,11 @@ const SettingsScreen = () => {
     }
 
     try {
-      const customerInfo = await Purchases.getCustomerInfo();
+      const customerInfo = await getCustomerInfo();
+      if (!customerInfo) {
+        Alert.alert("Error", "Failed to restore purchases. Please try again later.");
+        return;
+      }
 
       if (customerInfo.entitlements.active["pro"]) {
         Alert.alert("Success", "Your purchases have been restored!");

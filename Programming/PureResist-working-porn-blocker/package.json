@@ -74,7 +74,7 @@
     "react-native-purchases-ui": "~8.10.1"
   },
   "devDependencies": {
-    "eas-cli": "^16.0.0",
+    "eas-cli": "^18.0.0",
     "@babel/core": "^7.25.2",
     "@babel/plugin-proposal-export-namespace-from": "^7.18.9",
     "@babel/plugin-transform-export-namespace-from": "^7.25.9",

@@ -8,7 +8,7 @@ module.exports = ({ config }) => {
     owner: "designaxe",
     name: "PureResist",
     slug: "pureresist",
-    version: "1.0.42",
+    version: "1.0.44",
     orientation: "portrait",
     icon: "./assets/icon.png",
     userInterfaceStyle: "light",
@@ -27,7 +27,7 @@ module.exports = ({ config }) => {
         NSFamilyControlsUsageDescription:
           "This app uses Screen Time API to help you block inappropriate content and maintain your recovery goals.",
       },
-      buildNumber: "103",
+      buildNumber: "107",
       deploymentTarget: "16.0",
       entitlements: {
         "com.apple.developer.family-controls": true,
@@ -43,7 +43,7 @@ module.exports = ({ config }) => {
       },
       package: "com.pureresist.nofapapp",
       permissions: [],
-      versionCode: 9,
+      versionCode: 11,
       // Performance optimizations
       enableProguardInReleaseBuilds: true,
       enableSeparateBuildPerCPUArchitecture: true,

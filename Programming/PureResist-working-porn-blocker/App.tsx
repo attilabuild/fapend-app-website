@@ -231,7 +231,6 @@ import SplashScreen from "./components/SplashScreen";
 import { RevenueCatProvider } from "hooks/useRevenueCat";
 import { NotificationProvider } from "hooks/useNotifications";
 import Header from "components/navigation/Header";
-import { POSTHOG_API_KEY, POSTHOG_HOST } from "config";
 import AppNavigator from "navigation/AppNavigator";
 
 export default function App() {

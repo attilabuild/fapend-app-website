@@ -1,5 +1,5 @@
 import { REVENUECAT_API_KEYS } from "config";
-import { createContext, useContext, useEffect, useState } from "react";
+import { createContext, useContext, useRef, useState } from "react";
 import { Platform } from "react-native";
 import Purchases, {
   CustomerInfo,
@@ -18,12 +18,16 @@ interface RevenueCatContext {
   packages: PurchasesPackage[] | null;
   purchasePackage: (pack: PurchasesPackage) => Promise<void>;
   updateCustomerInfo: (info: CustomerInfo) => Promise<void>;
+  refreshPackages: () => Promise<void>;
+  getCustomerInfo: () => Promise<CustomerInfo | null>;
 }
 
 const RevenueCatContext = createContext<RevenueCatContext>({
   packages: null,
   purchasePackage: async () => {},
   updateCustomerInfo: async () => {},
+  refreshPackages: async () => {},
+  getCustomerInfo: async () => null,
 });
 
 export const RevenueCatProvider = ({
@@ -34,31 +38,78 @@ export const RevenueCatProvider = ({
   const [packages, setPackages] = useState<PurchasesPackage[] | null>(null);
   const navigation = useNavigation();
   const { user } = useAuthStore.getState();
+  const isConfiguredRef = useRef(false);
+  const configPromiseRef = useRef<Promise<void> | null>(null);
+
+  const ensureConfigured = async () => {
+    if (isConfiguredRef.current) return;
+    if (configPromiseRef.current) {
+      await configPromiseRef.current;
+      return;
+    }
+    configPromiseRef.current = (async () => {
+      await new Promise((r) => setTimeout(r, 600));
+      const apiKey =
+        Platform.OS === "ios"
+          ? REVENUECAT_API_KEYS.ios
+          : REVENUECAT_API_KEYS.android;
+      await Purchases.configure({ apiKey, appUserID: user?._id });
+      Purchases.setLogLevel(LOG_LEVEL.DEBUG);
+      Purchases.addCustomerInfoUpdateListener((info) => {
+        updateCustomerInfo(info);
+      });
+      isConfiguredRef.current = true;
+    })();
+    await configPromiseRef.current;
+  };
 
   const loadOfferings = async () => {
+    await ensureConfigured();
     const offerings = await Purchases.getOfferings();
     const currentOfferings = offerings.current;
-
     if (currentOfferings) {
       setPackages(currentOfferings.availablePackages);
     }
   };
 
+  const refreshPackages = async () => {
+    try {
+      await loadOfferings();
+    } catch (e) {
+      console.log("Error loading offerings", e);
+    }
+  };
+
   const purchasePackage = async (pack: PurchasesPackage) => {
     try {
+      await ensureConfigured();
       await Purchases.purchasePackage(pack);
     } catch (e) {
       console.log("Error purchasing package", e);
     }
   };
 
+  const getCustomerInfo = async (): Promise<CustomerInfo | null> => {
+    try {
+      await ensureConfigured();
+      return await Purchases.getCustomerInfo();
+    } catch (e) {
+      console.log("Error getting customer info", e);
+      return null;
+    }
+  };
+
   const updateCustomerInfo = async (info: CustomerInfo) => {
-    // Verify the subscription status with RevenueCat
     if (!user) {
       console.error("User not found");
       return;
     }
-
+    try {
+      await ensureConfigured();
+    } catch (e) {
+      console.log("Error ensuring RevenueCat configured", e);
+      return;
+    }
     const customerInfo = await Purchases.getCustomerInfo();
 
     let updatedUser: IUser = {
@@ -162,39 +213,14 @@ export const RevenueCatProvider = ({
       }
     } catch (dbError) {
       console.error("Error updating user subscription in database:", dbError);
-      // If database update fails, revert the local changes
       useAuthStore.getState().restoreAuth(user);
       await AsyncStorage.setItem("auth_user", JSON.stringify(user));
     }
   };
 
-  useEffect(() => {
-    const initRevenueCat = async () => {
-      try {
-        const apiKey =
-          Platform.OS === "ios"
-            ? REVENUECAT_API_KEYS.ios
-            : REVENUECAT_API_KEYS.android;
-
-        await Purchases.configure({ apiKey, appUserID: user?._id });
-
-        Purchases.setLogLevel(LOG_LEVEL.DEBUG);
-
-        Purchases.addCustomerInfoUpdateListener((info) => {
-          updateCustomerInfo(info);
-        });
-
-        await loadOfferings();
-      } catch (e) {
-        console.log("Error initializing RevenueCat", e);
-      }
-    };
-    initRevenueCat();
-  }, []);
-
   return (
     <RevenueCatContext.Provider
-      value={{ packages, purchasePackage, updateCustomerInfo }}
+      value={{ packages, purchasePackage, updateCustomerInfo, refreshPackages, getCustomerInfo }}
     >
       {children}
     </RevenueCatContext.Provider>
