@@ -1,0 +1,22 @@
+# EAS Build regenerates these on the build server, so excluding them
+# from the upload makes the archive much smaller and uploads much faster.
+
+# CocoaPods — reinstalled via `pod install` on the build server
+ios/Pods/
+ios/build/
+ios/DerivedData/
+ios/*.xcworkspace/xcuserdata/
+ios/*.xcodeproj/xcuserdata/
+
+# Android equivalents
+android/build/
+android/app/build/
+android/.gradle/
+
+# Node — reinstalled via `npm install` on the build server
+node_modules/
+
+# Misc dev artifacts
+.expo/
+*.log
+.DS_Store
